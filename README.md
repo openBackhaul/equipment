@@ -7,7 +7,7 @@ Equipment for an Ethernet PHY interface according to IEEE 802.3
 
 ### Introduction (Requirements, Terms, Information, Processes)
 - Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
-- [AirEquipment_1.0.0-tsp.190619.1730+intro.1](./AirEquipment_1.0.0-tsp.190619.1730+intro.1.docx)
+- [AirEquipment_1.0.0-tsp.190619.1805+intro.1](./AirEquipment_1.0.0-tsp.190619.1805+intro.1.docx)
 
 ### UML
 - The wireEquipment is modeled with the [ONF Core Physical Model of TR-512.6](../../../core/tree/tsp)
