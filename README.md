@@ -10,8 +10,7 @@ Equipment for an Ethernet PHY interface according to IEEE 802.3
 - [AirEquipment_1.0.0-tsp.190619.1730+intro.1](./AirEquipment_1.0.0-tsp.190619.1730+intro.1.docx)
 
 ### UML
-The wireEquipment is modeled with the ONF Core Physical Model of TR-512.6
-- Reference on UML version of Core IM to be provided
+- The wireEquipment is modeled with the [ONF Core Physical Model of TR-512.6](../../../core/tree/tsp)
 
 ### Overview 
 - Picture of the updated ONF Core Physical Model to be provided
@@ -20,11 +19,11 @@ The wireEquipment is modeled with the ONF Core Physical Model of TR-512.6
 - not planned
 
 ### Dictionary
-The following Dokument describes how the attributes of the Core IM are to be filled
+- The following Dokument describes how the attributes of the Core IM are to be filled
 - Document to be provided 
 
 ### YANG File
-- Reference on YANG version of Core IM to be provided
+- The wireEquipment is modeled with the [ONF Core Physical Model of TR-512.6](../../../core/tree/tsp)
 
 ### Interface Simulator
 - not planned
