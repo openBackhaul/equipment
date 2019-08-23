@@ -5,31 +5,12 @@ Equipment for an Ethernet PHY interface according to IEEE 802.3
 - Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
 - 1.0.0-tsp.d.t : Model for the Transport SDN Pilot at Telefonica Germany
 
-### Introduction (Requirements, Terms, Information, Processes)
+### Specification (Instantiation, Configuration, Deletion, Information and Operational State)
 - Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
-- [WireEquipment_1.0.0-tsp.190619.1805+intro.1](./WireEquipment_1.0.0-tsp.190619.1805+intro.1.docx)
+- [WireEquipment_1.0.0-tsp.190823.1040+spec.1](./WireEquipment_1.0.0-tsp.190823.1040+spec.1.docx)
 
-### UML
-- The wireEquipment is modeled with the [ONF Core Physical Model of TR-512.6](../../../core/tree/tsp)
-
-### Overview 
-- Picture of the updated ONF Core Physical Model to be provided
-
-### List of Classes
-- not planned
-
-### Dictionary
-- The following Dokument describes how the attributes of the Core IM are to be filled
-- Document to be provided 
-
-### YANG File
-- The wireEquipment is modeled with the [ONF Core Physical Model of TR-512.6](../../../core/tree/tsp)
-
-### Interface Simulator
-- not planned
-
-### Interface Validator
-- not planned
+### UML and YANG
+- The wireEquipment uses structure and attributes of the [ONF Core Physical Model of TR-512.6](../../../core/tree/tsp)
 
 ### Publication
 - not planned
