@@ -7,7 +7,7 @@ Equipment for an Ethernet PHY interface according to IEEE 802.3
 
 ### Specification (Instantiation, Configuration, Deletion, Information and Operational State)
 - Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
-- [WireEquipment_1.0.0-tsp.190823.1040+spec.1](./WireEquipment_1.0.0-tsp.190823.1040+spec.1.docx)
+- [WireEquipment_1.0.0-tsp.190920.1230+spec.1](./WireEquipment_1.0.0-tsp.190920.1230+spec.1.docx)
 
 ### UML and YANG
 - The wireEquipment uses structure and attributes of the [ONF Core Physical Model of TR-512.6](../../../core/tree/tsp)
