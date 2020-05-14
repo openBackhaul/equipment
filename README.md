@@ -1,8 +1,9 @@
 # equipment
-Device Inventory - Instantiation, Configuration, Deletion, Information and Operational State
+- Device Inventory
+- Instantiation, Configuration, Deletion, Information and Operational State
+- Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
 
 ### Branch
-- Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
 - 1.0.0-tsp.d.t : Model for the Transport SDN Pilot at Telefonica Germany
 
 ### WireEquipment
@@ -18,10 +19,10 @@ Device Inventory - Instantiation, Configuration, Deletion, Information and Opera
 - The Equipment specifications are using structure and attributes of the [ONF Core Physical Model of TR-512.6](../../../core/tree/tsp)
 
 ### Publication
-- planned to be referenced withing TR-532 2.0
+- Candidate for ONF TR-532 v2.0
 
 ### Aspired Model Classification
-- Trial
+- Live Network
 
 ### Open Issue List
 - Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
