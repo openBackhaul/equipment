@@ -1,26 +1,31 @@
-# wireEquipment
-Equipment for an Ethernet PHY interface according to IEEE 802.3
+# equipment
+Device Inventory - Instantiation, Configuration, Deletion, Information and Operational State
 
 ### Branch
 - Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
 - 1.0.0-tsp.d.t : Model for the Transport SDN Pilot at Telefonica Germany
 
-### Specification (Instantiation, Configuration, Deletion, Information and Operational State)
-- Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
+### WireEquipment
+- published
 - [WireEquipment_1.0.0-tsp.190920.1230+spec.1](./WireEquipment_1.0.0-tsp.190920.1230+spec.1.docx)
 
+### TransmitterEquipment
+- ongoing work
+- Update of WireEquipment_1.0.0-tsp.190920.1230+spec.1.docx plus expansion on AirInterface
+- [TransmitterEquipment_1.0.0-tsp.200514.2355+spec.1](./TransmitterEquipment_1.0.0-tsp.200514.2355+spec.1.docx)
+
 ### UML and YANG
-- The wireEquipment uses structure and attributes of the [ONF Core Physical Model of TR-512.6](../../../core/tree/tsp)
+- The Equipment specifications are using structure and attributes of the [ONF Core Physical Model of TR-512.6](../../../core/tree/tsp)
 
 ### Publication
-- not planned
+- planned to be referenced withing TR-532 2.0
 
 ### Aspired Model Classification
 - Trial
 
 ### Open Issue List
 - Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
-- [wireEquipment/issues](../../issues)
+- [equipment/issues](../../issues)
 
 ### Comments
 ./.
