@@ -18,8 +18,10 @@
 - [TransmitterEquipment_1.0.0-tsp.200622.1910+spec.1](./TransmitterEquipment_1.0.0-tsp.200622.1910+spec.1.docx)
 - Update of TransmitterEquipment_1.0.0-tsp.200622.1910+spec.1 by results of discussions on 23rd of June
 - [TransmitterEquipment_1.0.0-tsp.200623.1005+spec.1](./TransmitterEquipment_1.0.0-tsp.200623.1005+spec.1.docx)
-- Update of TransmitterEquipment_1.0.0-tsp.200623.1005+spec.1 by results of discussions on 24rd of June
+- Update of TransmitterEquipment_1.0.0-tsp.200623.1005+spec.1 by results of discussions on 24th of June
 - [TransmitterEquipment_1.0.0-tsp.200624.1220+spec.1](./TransmitterEquipment_1.0.0-tsp.200624.1220+spec.1.docx)
+- Update of TransmitterEquipment_1.0.0-tsp.200624.1220+spec.1 by results of discussions on 25th of June
+- [TransmitterEquipment_1.0.0-tsp.200625.2220+spec.1](./TransmitterEquipment_1.0.0-tsp.200625.2220+spec.1.docx)
 
 ### UML and YANG
 - The Equipment specifications are using structure and attributes of the [ONF Core Physical Model of TR-512.6](../../../core/tree/tsp)
