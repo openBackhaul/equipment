@@ -7,13 +7,10 @@
 - 1.0.0-tsp.d.t : Model for the Transport SDN Pilot at Telefonica Germany
 
 ### WireEquipment
-- published
-- [WireEquipment_1.0.0-tsp.190920.1230+spec.1](./WireEquipment_1.0.0-tsp.190920.1230+spec.1.docx)
+- [WireEquipment_1.0.0-tsp.190920.1230+spec.1](./WireEquipment_1.0.0-tsp.190920.1230+spec.1.docx) (outdated)
 
 ### TransmitterEquipment
-- ongoing work
-- Update of WireEquipment_1.0.0-tsp.190920.1230+spec.1.docx plus expansion on AirInterface
-- [TransmitterEquipment_1.0.0-tsp.200702.1720+spec.1](./TransmitterEquipment_1.0.0-tsp.200702.1720+spec.1.docx)
+- [TransmitterEquipment_1.0.0-tsp.200715.1225+spec.1](./TransmitterEquipment_1.0.0-tsp.200715.1225+spec.1.pdf) (agreed on the ONF 5G-xhaul call on 15th of July 2020)
 
 ### UML and YANG
 - The Equipment specifications are using structure and attributes of the [ONF Core Physical Model of TR-512.6](../../../core/tree/tsp)
