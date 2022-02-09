@@ -9,13 +9,13 @@
 - [TransmitterEquipment_1.0.0-tsp.200715.1225+spec.1](./TransmitterEquipment_1.0.0-tsp.200715.1225+spec.1.pdf) (agreed on the ONF 5G-xhaul call on 15th of July 2020)
 
 ### UML
-- [EquipmentAugment_1.0.0-tsi.220209.1545](./EquipmentAugment_1.0.0-tsi.220209.1545.zip)
+- [EquipmentAugment_1.0.0-tsi.220209.2040](./EquipmentAugment_1.0.0-tsi.220209.2040.zip)
 
 ### Overview 
-- [EquipmentAugment_1.0.0-tsi.220209.1545+overview.1](./EquipmentAugment_1.0.0-tsi.220209.1545+overview.1.png)
+- [EquipmentAugment_1.0.0-tsi.220209.2040+overview.1](./EquipmentAugment_1.0.0-tsi.220209.2040+overview.1.png)
 
 ### GenDoc Export
-- [EquipmentAugment_1.0.0-tsi.220209.1545+gendoc.1](./EquipmentAugment_1.0.0-tsi.220209.1545+gendoc.1.docx)
+- [EquipmentAugment_1.0.0-tsi.220209.2040+gendoc.1](./EquipmentAugment_1.0.0-tsi.220209.2040+gendoc.1.docx)
 
 ### Augmentation Condition
 - not required
