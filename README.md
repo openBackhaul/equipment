@@ -1,22 +1,39 @@
-# equipment
+# TransmitterEquipment and equipmentAugment
 - Device Inventory
-- Instantiation, Configuration, Deletion, Information and Operational State
 - Thorsten Heinze (Thorsten.Heinze@openBackhaul.com)
 
 ### Branch
-- 1.0.0-tsp.d.t : Model for the Transport SDN Pilot at Telefonica Germany
+- 1.0.0-tsi.d.t : Model for the Transport SDN Introduction at Telefonica Germany
 
-### WireEquipment
-- [WireEquipment_1.0.0-tsp.190920.1230+spec.1](./WireEquipment_1.0.0-tsp.190920.1230+spec.1.docx) (outdated)
-
-### TransmitterEquipment
+### TransmitterEquipment Specification
 - [TransmitterEquipment_1.0.0-tsp.200715.1225+spec.1](./TransmitterEquipment_1.0.0-tsp.200715.1225+spec.1.pdf) (agreed on the ONF 5G-xhaul call on 15th of July 2020)
 
-### UML and YANG
-- The Equipment specifications are using structure and attributes of the [ONF Core Physical Model of TR-512.6](../../../core/tree/tsp)
+### UML
+- to be provided
+
+### Overview 
+- to be provided
+
+### GenDoc Export
+- to be provided
+
+### Augmentation Condition
+- not required
+
+### YANG File
+- to be provided
+
+### JSON Schema
+- to be provided
+
+### Interface Simulator
+- to be provided
+
+### Interface Validator
+- to be provided
 
 ### Publication
-- Candidate for ONF TR-532 v2.0
+- Candidate for ONF TR-532 v2.0 
 
 ### Aspired Model Classification
 - Live Network
