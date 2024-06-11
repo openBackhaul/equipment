@@ -1,4 +1,4 @@
-# TransmitterEquipment and equipmentAugment
+# TransmitterEquipment and EquipmentAugment
 - Augmentations to basic classes of the ONF Core Information Model
 
 ### Branch
@@ -20,16 +20,16 @@
 - not required
 
 ### YANG File
-- [EquipmentAugment_1.0.0-tsi.240104.1330+yang.1](./EquipmentAugment_1.0.0-tsi.240104.1330+yang.1.zip)
+- [EquipmentAugment_1.0.0-tsi.240104.1330+yang](./EquipmentAugment_1.0.0-tsi.240104.1330+yang/)
 
-### JSON Schema
-- to be provided
+### Schema  
+- [EquipmentAugment_1.0.0-tsi.240104.1330+schema](./EquipmentAugment_1.0.0-tsi.240104.1330+schema/)  
 
 ### Interface Simulator
-- to be provided
+- [EquipmentAugment_1.0.0-tsi.240104.1330+simulator](./EquipmentAugment_1.0.0-tsi.240104.1330+simulator/)  
 
 ### Interface Validator
-- [EquipmentAugment_1.0.0-tsi.240104.1330+validator.1](./EquipmentAugment_1.0.0-tsi.240104.1330+validator.1.zip)
+- [EquipmentAugment_1.0.0-tsi.240104.1330+validator](./EquipmentAugment_1.0.0-tsi.240104.1330+validator/)  
 
 ### Publication
 - Candidate for ONF TR-532 v2.0 
