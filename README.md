@@ -26,15 +26,15 @@
 - to be provided
 
 ### Interface Simulator
-- to be provided
+- [EquipmentAugment_1.0.0-tsi.240104.1330+simulator.1](./EquipmentAugment_1.0.0-tsi.240104.1330+simulator.1.zip)
 
 ### Interface Validator
-- to be provided
+- [EquipmentAugment_1.0.0-tsi.240104.1330+validator.1](./EquipmentAugment_1.0.0-tsi.240104.1330+validator.1.zip)
 
 ### Publication
-- Candidate for ONF TR-532 v2.0 
+- Referenced in ONF TR-532 v2.0 
 
-### Aspired Model Classification
+### Achieved Model Classification
 - Live Network
 
 ### Open Issue List
