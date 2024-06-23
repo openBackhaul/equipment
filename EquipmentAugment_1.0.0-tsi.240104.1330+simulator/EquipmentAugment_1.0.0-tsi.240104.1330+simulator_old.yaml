@@ -1,0 +1,1232 @@
+openapi: 3.0.1
+info:
+  title: EquipmentAugment_1.0.0-tsi.240104.1330+simulator
+  version: 1.0.0
+
+paths:
+########################################################################################################################
+#   MWDI Simulator
+########################################################################################################################
+  /core-model-1-4:network-control-domain=cache/control-construct={mountName}:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/fields'
+    get:
+      summary: Retrieve control-construct
+      description: 'Retrieve operation of resource: control-construct'
+      operationId: retrieve_control-construct
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/control-construct_schema'
+        '400':
+          description: Internal Error
+          content: {}
+
+  /core-model-1-4:network-control-domain=cache/control-construct={mountName}/equipment={uuid}:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/fields'
+    get:
+      tags:
+      - equipment
+      summary: Retrieve equipment by ID
+      description: 'Retrieve operation of resource: equipment'
+      operationId: retrieve_control-construct_equipment_equipment_by_id
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/equipment'
+        '400':
+          description: Internal Error
+          content: {}
+  /core-model-1-4:network-control-domain=cache/control-construct={mountName}/equipment={uuid}/connector={localId}:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/localId'
+      - $ref: '#/components/parameters/fields'
+    get:
+      tags:
+      - equipment
+      summary: Retrieve connector by ID
+      description: 'Retrieve operation of resource: connector'
+      operationId: retrieve_control-construct_equipment_connector_connector_by_id
+      parameters:
+      - name: uuid
+        in: path
+        description: ID of uuid
+        required: true
+        schema:
+          type: string
+      - name: localId
+        in: path
+        description: ID of localId
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/connector_schema'
+        '400':
+          description: Internal Error
+          content: {}
+  /core-model-1-4:network-control-domain=cache/control-construct={mountName}/equipment={uuid}/contained-holder={localId}:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/localId'
+      - $ref: '#/components/parameters/fields'
+    get:
+      tags:
+      - equipment
+      summary: Retrieve contained-holder by ID
+      description: 'Retrieve operation of resource: contained-holder'
+      operationId: retrieve_control-construct_equipment_contained-holder_contained-holder_by_id
+      parameters:
+      - name: uuid
+        in: path
+        description: ID of uuid
+        required: true
+        schema:
+          type: string
+      - name: localId
+        in: path
+        description: ID of localId
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/contained-holder_schema'
+        '400':
+          description: Internal Error
+          content: {}
+  /core-model-1-4:network-control-domain=cache/control-construct={mountName}/equipment={uuid}/expected-equipment={localId}:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/localId'
+      - $ref: '#/components/parameters/fields'
+    get:
+      tags:
+      - equipment
+      summary: Retrieve expected-equipment by ID
+      description: 'Retrieve operation of resource: expected-equipment'
+      operationId: retrieve_control-construct_equipment_expected-equipment_expected-equipment_by_id
+      parameters:
+      - name: uuid
+        in: path
+        description: ID of uuid
+        required: true
+        schema:
+          type: string
+      - name: localId
+        in: path
+        description: ID of localId
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/expected-equipment'
+        '400':
+          description: Internal Error
+          content: {}
+  /core-model-1-4:network-control-domain=cache/control-construct={mountName}/equipment={uuid}/actual-equipment:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getCachedActualEquipment
+      summary: 'Provides ActualEquipment from cache'
+      tags:
+        - IndividualServices
+      security:
+        - apiKeyAuth: []
+      responses:
+        '200':
+          description: 'ActualEquipment provided from cache'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/actual-equipment'
+                example:
+                  operational-state: 'ENABLED'
+                  structure:
+                    category: 'OUTDOOR_UNIT'
+                  physical-properties:
+                    temperature: '29'
+                  manufactured-thing:
+                    manufacturer-properties:
+                      manufacturer-name: 'Huawei'
+                    equipment-type:
+                      part-type-identifier: 'HE32423424K'
+                      version: '240611'
+                    equipment-instance:
+                      manufacture-date: '0000-00-00'
+                      serial-number: '3874892734729387'
+          headers:
+            x-correlator:
+              $ref: '#/components/headers/x-correlator'
+            exec-time:
+              $ref: '#/components/headers/exec-time'
+            backend-time:
+              $ref: '#/components/headers/backend-time'
+            life-cycle-state:
+              $ref: '#/components/headers/life-cycle-state'
+        '500':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        default:
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+
+########################################################################################################################
+#   Common Components
+########################################################################################################################
+components:
+  parameters:
+    user:
+      name: user
+      in: header
+      required: true
+      schema:
+        type: string
+        example: 'User Name'
+      description: 'User identifier from the system starting the service call'
+    originator:
+      name: originator
+      in: header
+      required: true
+      schema:
+        type: string
+        minLength: 3
+        example: 'Resolver'
+      description: >
+        'Identification for the system consuming the API, as defined in
+         [/core-model-1-4:control-construct/logical-termination-point={uuid}/layer-protocol=0/http-client-interface-1-0:http-client-interface-pac/http-client-interface-configuration/application-name]'
+    x-correlator:
+      name: x-correlator
+      in: header
+      required: true
+      schema:
+        type: string
+        pattern: '^[0-9A-Fa-f]{8}(?:-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$'
+        description: 'Empty string accepted from external applications.'
+        example: '550e8400-e29b-11d4-a716-446655440000'
+      description: 'UUID for the service execution flow that allows to correlate requests and responses'
+    trace-indicator:
+      name: trace-indicator
+      in: header
+      required: true
+      schema:
+        type: string
+        pattern: '^([0-9]+)(\.([0-9]+))*$'
+        description: 'Empty string accepted from external applications.'
+        example: '1.3.1'
+      description: 'Sequence of request numbers along the flow'
+    customer-journey:
+      name: customer-journey
+      in: header
+      required: true
+      schema:
+        type: string
+        example: 'Unknown value'
+      description: 'Holds information supporting customer’s journey to which the execution applies'
+    mountName:
+      name: mountName
+      in: path
+      required: true
+      schema:
+        type: string
+        example: '222250001'
+      description: 'The mountName of the device that is addressed by the request'
+    uuid:
+      name: uuid
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 'LTP-MWPS-TTP-1-1'
+      description: 'Instance identifier that is unique within the device'
+    uuid1:
+      name: uuid1
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 'LTP-MWPS-TTP-1-1'
+      description: 'Another instance identifier that is unique within the device'
+    localId:
+      name: localId
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 'LP-MWPS-TTP-1-1'
+      description: 'Instance identifier that is unique within its list'
+    fields:
+      name: fields
+      in: query
+      required: false
+      schema:
+        type: string
+        example: 'node(node-id;netconf-node-topology:connection-status)'
+      description: 'Query parameter to filter ressources according to RFC8040 fields filter spec'
+  responses:
+    responseForErroredServiceRequests:
+      description: 'Response in case of errored service requests'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/errorDescription'
+      headers:
+        x-correlator:
+          schema:
+            type: string
+            pattern: '^[0-9A-Fa-f]{8}(?:-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$'
+            example: '550e8400-e29b-11d4-a716-446655440000'
+          description: 'UUID for the service execution flow that allows to correlate requests and responses. Its value must be identical at the response compared with its corresponding request'
+        exec-time:
+          schema:
+            type: integer
+            example: 1100
+          description: 'Value written by the service provider, reporting the total elapsed time for the execution, including all the additional processing needed to retrieve the data from the backend service. Expressed in milliseconds'
+        backend-time:
+          schema:
+            type: integer
+            example: 850
+          description: 'Value written by the service provider, reporting the elapsed time for data retrieval from the backend (service invocation, database access…). Expressed in milliseconds'
+    responseForErroredOamRequests:
+      description: 'Response in case of errored OaM requests'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/errorDescription'
+  headers:
+    x-correlator:
+      schema:
+        type: string
+        example: '550e8400-e29b-11d4-a716-446655440000'
+      description: 'UUID for the service execution flow that allows to correlate requests and responses. Its value must be identical at the response compared with its corresponding request'
+    exec-time:
+      schema:
+        type: integer
+        example: 1100
+      description: 'Value written by the service provider, reporting the total elapsed time for the execution, including all the additional processing needed to retrieve the data from the backend service. Expressed in milliseconds'
+    backend-time:
+      schema:
+        type: integer
+        example: 850
+      description: 'Value written by the service provider, reporting the elapsed time for data retrieval from the backend (service invocation, database access…). Expressed in milliseconds'
+    life-cycle-state:
+      schema:
+        type: string
+        enum:
+          - 'EXPERIMENTAL'
+          - 'OPERATIONAL'
+          - 'DEPRECATED'
+          - 'OBSOLETE'
+          - 'UNKNOWN'
+          - 'NOT_YET_DEFINED'
+        example: 'EXPERIMENTAL'
+  schemas:
+    errorDescription:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+
+    control-construct_schema:
+      allOf:
+      - $ref: '#/components/schemas/control-construct'
+      - type: object
+        properties:
+          external-managed-id:
+            $ref: '#/components/schemas/external-managed-universal-id'
+          local-id:
+            type: string
+            description: |-
+              An identifier that is unique in the context of some scope that is less than the global scope.
+
+              (This should be considered in the context of Identifier: A property of an entity/role with a value that is unique within an identifier space, where the identifier space is itself unique, and immutable. The identifier therefore represents the identity of the entity/role. An identifier carries no semantics with respect to the purpose of the entity.)
+          uuid:
+            type: string
+            description: |-
+              UUID: An identifier that is universally unique
+
+              (This should be considered in the context of Identifier: A property of an entity/role with a value that is unique within an identifier space, where the identifier space is itself globally unique, and immutable. An identifier carries no semantics with respect to the purpose or state of the entity)
+              The uuid should be treated as opaque by the user.
+          name:
+            type: array
+            description: List of names.
+            items:
+              $ref: '#/components/schemas/name-and-value'
+            x-key: value-name
+          label:
+            type: array
+            description: List of labels.
+            items:
+              $ref: '#/components/schemas/name-and-value'
+            x-key: value-name
+          extension:
+            type: array
+            description: List of simple name-value extensions.
+            items:
+              $ref: '#/components/schemas/name-and-value'
+            x-key: value-name
+          operational-state:
+            type: string
+            description: The operational state is used to indicate whether or not
+              the resource is installed and working.
+          administrative-control:
+            type: string
+            description: |-
+              The administrativeControl state provides control of the availability of specific resources without modification to the provisioning of those resources.
+              The value is the current control target. The actual administrativeState may or may not be at target.
+          administrative-state:
+            type: string
+            description: |-
+              Shows whether or not the client has permission to use or has a prohibition against using the resource.
+              The administrative state expresses usage permissions for specific resources without modification to the provisioning of those resources.
+          lifecycle-state:
+            type: string
+            description: "Used to track the planned deployment, allocation to clients\
+              \ and withdrawal of resources."
+          address:
+            type: array
+            items:
+              type: string
+              description: One or more descriptions of the location.
+          control-construct-pac:
+            $ref: '#/components/schemas/control-construct-pac'
+    control-construct-spec:
+      type: object
+      properties:
+        control-construct-pac:
+          $ref: '#/components/schemas/control-construct-pac'
+    control-construct-pac:
+      type: object
+      properties:
+        external-label:
+          type: string
+          description: The externalLabel attribute is for the operator to persistently
+            store an identifier from his documentation inside the device.
+        last-config-change-timestamp:
+          type: string
+          description: 'This attribute reports the timestamp of the last configuration-changed.\
+            \ Configuration changes are AttributeValueChanges, ObjectDeletions and\
+            \ ObjectCreations.'
+    connector-spec:
+      type: object
+      properties:
+        connector-pac:
+          $ref: '#/components/schemas/connector-pac'
+    connector-pac:
+      type: object
+      properties:
+        connector-kind:
+          type: string
+          description: Kind of physical connector as available at the outside of the
+            device.
+        outside-label:
+          type: string
+          description: 'String, which is identifying the physical position of a connector\
+            \ (e.g. RJ45 connector, SFP, IF port) at the outside of the device.'
+        sequence-id:
+          type: integer
+          description: All instances of Connector in the Equipment::connector attribute
+            shall be identifiable by a locally unique 'sequenceId'. The 'sequenceId'
+            should be unique for the list of Connector objects of the Equipment object.
+            Gaps in the sequence would be legal.
+          format: int16
+    holder-spec:
+      type: object
+      properties:
+        holder-pac:
+          $ref: '#/components/schemas/holder-pac'
+    holder-pac:
+      type: object
+      properties:
+        vendor-label:
+          type: string
+          description: 'Identifier of the holder according to the currently valid,\
+            \ official documentation of the equipment.'
+        outside-label:
+          type: string
+          description: 'Label, which is printed at the outside of the device for identifying\
+            \ the physical position e.g. of a board inside the device.'
+        sequence-id:
+          type: integer
+          description: All instances of Holder in the Equipment::containedHolder attribute
+            shall be identifiable by a unique 'sequenceId'. The 'sequenceId' should
+            be unique for the list of Holder objects of the Equipment object. Gaps
+            in the sequence would be legal.
+          format: int16
+    name-and-value:
+      type: object
+      properties:
+        value-name:
+          type: string
+          description: The name of the value. The value need not have a name.
+        value:
+          type: string
+          description: The value.
+      description: A scoped name-value pair.
+    external-managed-universal-id:
+      type: object
+      properties:
+        manager-identifier:
+          type: string
+        external-managed-uuid:
+          type: string
+    control-parameters-pac:
+      type: object
+      properties:
+        reversion-mode:
+          type: string
+          description: Indicates whether the protection scheme is revertive or non-revertive.
+        wait-to-revert-time:
+          type: integer
+          description: |-
+            If the protection system is revertive, this attribute specifies the time, in minutes, to wait after a fault clears on a higher priority (preferred) resource before switching to the preferred resource.
+            If a further fault occurs on the preferred resource in the waitToRevertTime then the reversion attempt is cancelled.
+            The WTR timer is overridden by the needs of a higher priority signal. Depending upon which resource is requested this may simply cancel the attempt to revert of may cause immediate reversion.
+          format: int64
+        prot-type:
+          type: string
+          description: Indicates the protection scheme that is used for the ProtectionGroup.
+        hold-off-time:
+          type: integer
+          description: 'This attribute indicates the time, in milliseconds, between\
+            \ declaration of a switch trigger condition (e.g. signal degrade or signal\
+            \ fail), and the initialization of the protection switching algorithm.'
+          format: int64
+        network-scheme-specification:
+          type: string
+      description: A list of control parameters to apply to a switch.
+    name:
+      type: object
+      properties:
+        name:
+          type: array
+          description: List of names.
+          items:
+            $ref: '#/components/schemas/name-and-value'
+          x-key: value-name
+      description: 'Name: A property of an entity with a value that is unique in some\
+        \ namespace but may change during the life of the entity. A name carries no\
+        \ semantics with respect to the purpose of the entity.'
+    global-class:
+      description: |-
+        Represents a type of thing (an Entity) that has instances which can exist in their own right (independently of any others).
+
+        Entity: Has identity, defined boundary, properties, functionality and lifecycle in a global context.
+
+        (This should be considered in the context of a Class: (usage) The representation of a thing that may be an entity or an inseparable Entity Feature).
+      allOf:
+      - $ref: '#/components/schemas/name'
+      - $ref: '#/components/schemas/label'
+      - $ref: '#/components/schemas/extension'
+      - $ref: '#/components/schemas/state-pac'
+      - $ref: '#/components/schemas/address'
+      - type: object
+        properties:
+          external-managed-id:
+            $ref: '#/components/schemas/external-managed-universal-id'
+          local-id:
+            type: string
+            description: |-
+              An identifier that is unique in the context of some scope that is less than the global scope.
+
+              (This should be considered in the context of Identifier: A property of an entity/role with a value that is unique within an identifier space, where the identifier space is itself unique, and immutable. The identifier therefore represents the identity of the entity/role. An identifier carries no semantics with respect to the purpose of the entity.)
+          uuid:
+            type: string
+            description: |-
+              UUID: An identifier that is universally unique
+
+              (This should be considered in the context of Identifier: A property of an entity/role with a value that is unique within an identifier space, where the identifier space is itself globally unique, and immutable. An identifier carries no semantics with respect to the purpose or state of the entity)
+              The uuid should be treated as opaque by the user.
+    local-class:
+      description: |
+        A LocalClass represents a Feature of an Entity. It is inseparable from a GlobalClass but is a distinct feature of that GlobalClass such that the instances of LocalClass are able to have associations to other instances.
+        Feature of an Entity: An inseparable, externally distinguishable part of an entity.
+        The mandatory LocalId of the LocalClass instance is unique in the context of the GlobalClass from which it is inseparable.
+        (This should be considered in the context of a Class: (usage) The representation of a thing that may be an entity or an inseparable feature of an entity.)
+      allOf:
+      - $ref: '#/components/schemas/name'
+      - $ref: '#/components/schemas/label'
+      - $ref: '#/components/schemas/extension'
+      - $ref: '#/components/schemas/state-pac'
+      - $ref: '#/components/schemas/address'
+      - type: object
+        properties:
+          local-id:
+            type: string
+            description: |-
+              An identifier that is unique in the context of some scope that is less than the global scope.
+
+              (This should be considered in the context of Identifier: A property of an entity/role with a value that is unique within an identifier space, where the identifier space is itself unique, and immutable. The identifier therefore represents the identity of the entity/role. An identifier carries no semantics with respect to the purpose of the entity.)
+    label:
+      type: object
+      properties:
+        label:
+          type: array
+          description: List of labels.
+          items:
+            $ref: '#/components/schemas/name-and-value'
+          x-key: value-name
+      description: A property of an entity with a value that is not expected to be
+        unique and is allowed to change. A label carries no semantics with respect
+        to the purpose of the entity and has no effect on the entity behavior or state.
+    extension:
+      type: object
+      properties:
+        extension:
+          type: array
+          description: List of simple name-value extensions.
+          items:
+            $ref: '#/components/schemas/name-and-value'
+          x-key: value-name
+      description: Extension provides an opportunity to define properties not declared
+        in the class that extend the class enabling a realization with simple ad-hoc
+        extension of standard classes to be conformant.
+    address:
+      type: object
+      properties:
+        address:
+          type: array
+          items:
+            type: string
+            description: One or more descriptions of the location.
+      description: Provides an opportunity to state the location of the entity via
+        one or more hierarchies of narrowing contexts.
+    state-pac:
+      type: object
+      properties:
+        operational-state:
+          type: string
+          description: The operational state is used to indicate whether or not the
+            resource is installed and working.
+        administrative-control:
+          type: string
+          description: |-
+            The administrativeControl state provides control of the availability of specific resources without modification to the provisioning of those resources.
+            The value is the current control target. The actual administrativeState may or may not be at target.
+        administrative-state:
+          type: string
+          description: |-
+            Shows whether or not the client has permission to use or has a prohibition against using the resource.
+            The administrative state expresses usage permissions for specific resources without modification to the provisioning of those resources.
+        lifecycle-state:
+          type: string
+          description: 'Used to track the planned deployment, allocation to clients\
+            \ and withdrawal of resources.'
+      description: Provides general state attributes.
+    field-replaceable:
+      description: |-
+        A rule class (an abstract specialization of Equipment) that represents an equipment that can be replaced in the field.
+        May plug in to a holder in another equipment (if not stand-alone).
+        Realization could use an FRU Boolean on Equipment.
+      allOf:
+      - $ref: '#/components/schemas/equipment'
+      - type: object
+        properties:
+          equipment-non-fru:
+            type: array
+            items:
+              $ref: '#/components/schemas/non-field-replaceable'
+            x-key: uuid
+          holder:
+            type: array
+            items:
+              $ref: '#/components/schemas/holder'
+            x-key: local-id
+          holder-address:
+            $ref: '#/components/schemas/holder'
+    non-field-replaceable:
+      $ref: '#/components/schemas/equipment'
+    connector-on-equipment-for-holder:
+      description: A rule class (an abstract specialization of Connector) that represents
+        a connector on an equipment that is intended to mate with a connector in a
+        holder.
+      allOf:
+      - $ref: '#/components/schemas/connector'
+      - type: object
+        properties:
+          connector-in-holder:
+            type: string
+            description: The equipment connector is plugged into the referenced holder
+              connector.
+    function-enablers:
+      type: object
+      properties:
+        power-state:
+          type: string
+          description: |-
+            The state of the power being supplied to the equipment.
+            Note that this attribute summarizes the power state.
+            Full details on the actual power system would be provided from a number of PC instances representing the relevant parts of the Power function (e.g. different voltage supplies).
+      description: Represents the dynamic aspects of the properties that relate to
+        the motive force that directly enable functionality to emerge from the equipment.
+    mechanical-functions:
+      type: object
+      properties:
+        rotation-speed:
+          type: string
+      description: Represents the dynamic aspects of the mechanical functions of the
+        equipment.
+    physical-properties:
+      type: object
+      properties:
+        temperature:
+          type: string
+      description: Represents the dynamic aspects of the physical environmental properties
+        of the equipment.
+    location:
+      type: object
+      properties:
+        equipment-location:
+          type: string
+        geographical-location:
+          type: string
+      description: Represents where the equipment is.
+    equipment-structure:
+      type: object
+      properties:
+        category:
+          type: string
+          description: This attribute provides the identifier for a category of equipments
+            regarded as having particular shared characteristics.
+      description: Represents the form of the equipment.
+    equipment-instance:
+      type: object
+      properties:
+        manufacture-date:
+          type: string
+          description: |-
+            This attribute represents the date on which this instance is manufactured.
+            The date type is a profile of the ISO 8601 standard for representation of dates using the Gregorian calendar.
+            The profile is defined by the full-date production in Section 5.6 of RFC 3339.
+            Values shall follow the pattern: ^\d{4}-\d{2}-\d{2}$ .
+            Reference: RFC 3339: Date and Time on the Internet: Timestamps.
+        serial-number:
+          type: string
+          description: This attribute represents the serial number of this instance.
+        asset-instance-identifier:
+          type: string
+          description: This attribute represents the asset identifier of this instance
+            from the manufacturer's perspective.
+      description: Represents the per instance invariant properties of the equipment.
+    equipment-type:
+      type: object
+      properties:
+        description:
+          type: string
+          description: Text describing the type of Equipment.
+        model-identifier:
+          type: string
+          description: This attribute identifies the model of the equipment.
+        part-type-identifier:
+          type: string
+          description: This attribute identifies the part type of the equipment.
+        type-name:
+          type: string
+          description: This attribute identifies the type of the equipment.
+        version:
+          type: string
+          description: This attribute identifies the version of the equipment.
+      description: Represents the invariant properties of the equipment that define
+        and characterize the type.
+    holder-structure:
+      type: object
+      properties:
+        holder-category:
+          type: string
+        is-captive:
+          type: boolean
+        is-guided:
+          type: boolean
+          description: This attribute indicates whether the holder has guides that
+            constrain the position of the equipment in the holder or not.
+        is-quantised-space:
+          type: boolean
+      description: Represents the form of the holder.
+    manufactured-thing:
+      type: object
+      properties:
+        manufacturer-properties:
+          $ref: '#/components/schemas/manufacturer-properties'
+        equipment-type:
+          $ref: '#/components/schemas/equipment-type'
+        equipment-instance:
+          $ref: '#/components/schemas/equipment-instance'
+        operator-augmented-equipment-type:
+          $ref: '#/components/schemas/operator-augmented-equipment-type'
+        operator-augmented-equipment-instance:
+          $ref: '#/components/schemas/operator-augmented-equipment-instance'
+      description: Collects all invariant aspects of a manufactured thing.
+    manufacturer-properties:
+      type: object
+      properties:
+        manufacturer-identifier:
+          type: string
+        manufacturer-name:
+          type: string
+      description: Represents the properties of the manufacturer.
+    mechanical-features:
+      type: object
+      description: Represents the invariant characteristics of dynamic mechanical
+        features of a physical thing.
+    operator-augmented-equipment-type:
+      type: object
+      properties:
+        asset-type-identifier:
+          type: string
+      description: Represents the invariant properties of the equipment asset allocated
+        by the operator that define and characterize the type.
+    physical-characteristics:
+      type: object
+      properties:
+        weight-characeristics:
+          type: string
+        fire-characteristics:
+          type: string
+        materials:
+          type: string
+      description: Represents the invariant physical characteristics (including composition
+        and physical robustness) of the type.
+    environmental-rating:
+      type: object
+      properties:
+        thermal-rating:
+          $ref: '#/components/schemas/thermal-rating'
+        power-rating:
+          $ref: '#/components/schemas/power-rating'
+        humidity-rating:
+          type: string
+          description: 'This attribute represents the humidity characteristics (preferred\
+            \ maximum/minimum, absolute maximum/minimum etc.) that the entity can\
+            \ tolerate.'
+      description: Represents the invariant physical operational boundaries for the
+        equipment/holder type.
+    position:
+      type: object
+      properties:
+        relative-position:
+          type: string
+      description: Represents the invariant relative position of the holder (with
+        respect to some frame of reference in an equipment) or connector on an equipment
+        or pin in a connector.
+    spatial-properties-of-type:
+      type: object
+      properties:
+        height:
+          type: string
+        width:
+          type: string
+        length:
+          type: string
+      description: Represents the basic invariant spatial properties of a physical
+        thing.
+    swappability:
+      type: object
+      properties:
+        is-hot-swappable:
+          type: boolean
+          description: |-
+            This attribute shall be set on true, if the described equipment could be inserted or removed from the running system, +
+            (without the need of powering the system down or restarting it) +
+            (without being damaged or causing damage to any other element in the system where the equipment is inserted/removed) +
+            (without causing traffic interruption or an alteration on the performance of other components or parts of the system not directly supported by this equipment.)
+            The aforementioned characteristic shall not require any manual change on other components of the system.
+            Potential traffic interruption on the interfaces supported by the component, which is being replaced, shall not matter to the value of the is-hot-swappable attribute.
+      description: Represents the degree of field replacement that is possible for
+        the equipment type.
+    operator-augmented-equipment-instance:
+      type: object
+      properties:
+        asset-instance-identifier:
+          type: string
+          description: This attribute represents the asset identifier of this instance
+            from the operator's perspective.
+      description: Represents the invariant properties of the equipment asset allocated
+        by the operator that define and characterize the type.
+    cable-details:
+      type: object
+      properties:
+        spatial-properties-of-type:
+          $ref: '#/components/schemas/spatial-properties-of-type'
+        physical-characteristics:
+          $ref: '#/components/schemas/physical-characteristics'
+        manufactured-thing:
+          $ref: '#/components/schemas/manufactured-thing'
+    connector-details:
+      type: object
+      properties:
+        position:
+          $ref: '#/components/schemas/position'
+        mechanical-features:
+          $ref: '#/components/schemas/mechanical-features'
+        manufactured-thing:
+          $ref: '#/components/schemas/manufactured-thing'
+    equipment-detail:
+      allOf:
+      - $ref: '#/components/schemas/local-class'
+      - type: object
+        properties:
+          location:
+            $ref: '#/components/schemas/location'
+          structure:
+            $ref: '#/components/schemas/equipment-structure'
+          swappability:
+            $ref: '#/components/schemas/swappability'
+          physical-properties:
+            $ref: '#/components/schemas/physical-properties'
+          function-enablers:
+            $ref: '#/components/schemas/function-enablers'
+          mechanical-functions:
+            $ref: '#/components/schemas/mechanical-functions'
+          physical-characteristics:
+            $ref: '#/components/schemas/physical-characteristics'
+          mechanical-features:
+            $ref: '#/components/schemas/mechanical-features'
+          spatial-properties-of-type:
+            $ref: '#/components/schemas/spatial-properties-of-type'
+          environmental-rating:
+            $ref: '#/components/schemas/environmental-rating'
+          manufactured-thing:
+            $ref: '#/components/schemas/manufactured-thing'
+    holder-details:
+      allOf:
+      - $ref: '#/components/schemas/local-class'
+      - type: object
+        properties:
+          spatial-properties-of-type:
+            $ref: '#/components/schemas/spatial-properties-of-type'
+          environmental-rating:
+            $ref: '#/components/schemas/environmental-rating'
+          position:
+            $ref: '#/components/schemas/position'
+          holder-structure:
+            $ref: '#/components/schemas/holder-structure'
+    thermal-rating:
+      type: object
+      properties:
+        thermal-rating-name:
+          type: string
+          description: 'Name of the rating property, e.g. Absolute.'
+        maximum-temperature:
+          type: number
+          description: The maximum temperature in Celsius.
+          format: double
+        minimum-temperature:
+          type: number
+          description: The minimum temperature in Celsius.
+          format: double
+      description: A thermal rating value range.
+    power-rating:
+      type: object
+      properties:
+        power-rating-name:
+          type: string
+          description: 'Name of the rating property, e.g. Absolute.'
+        power-rating-value:
+          type: string
+    connector:
+      description: |-
+        Represents a connector that may be fully exposed (e.g. to plug in a cable or on the end of a cable) or partially exposed (e.g. backplane to plug in another piece of equipment such as a module).
+        A physical port on the Equipment. A place where signals produced by the functionality of the Equipment may be accessed.
+      allOf:
+      - $ref: '#/components/schemas/local-class'
+      - type: object
+        properties:
+          connector:
+            type: string
+            description: |-
+              The Connector that is attached to this Connector so as to join the Equipment/Cable with this Connector to another Equipment/Cable.
+              This may provide physical support and/or allow signal flow.
+          orientation:
+            type: string
+            description: 'The physical orientation of the connector, such as whether\
+              \ it is a male, or female, or neutral structure.'
+          pin-layout:
+            type: string
+          connector-type:
+            type: string
+            description: The type of the connector.
+          role:
+            type: string
+            description: The purpose of the Connector in the physical space and the
+              functional space.
+    equipment:
+      description: |-
+        Represents any relevant physical thing.
+        Can be either field replaceable or not field replaceable.
+        Note: The model is currently constrained to inside plant.
+      allOf:
+      - $ref: '#/components/schemas/global-class'
+      - type: object
+        properties:
+          connector:
+            type: array
+            description: A Connector on the Equipment.
+            items:
+              $ref: '#/components/schemas/connector'
+            x-key: local-id
+          contained-holder:
+            type: array
+            description: |-
+              References the Holder in an Equipment that is available to take other Equipments.
+              For example:
+              - Slot in a sub-rack
+              - Slot in a Field Replaceable Unit that can take a small form-factor pluggable.
+            items:
+              $ref: '#/components/schemas/holder'
+            x-key: local-id
+          is-field-replaceable:
+            type: boolean
+            description: Indicates whether or not the equipment can be removed and
+              replaced 'in the field' (i.e. in a deployment) by normal operations
+              personnel.
+          function-block:
+            type: array
+            items:
+              type: string
+          expected-equipment:
+            type: array
+            items:
+              $ref: '#/components/schemas/expected-equipment'
+            x-key: local-id
+          actual-equipment:
+            $ref: '#/components/schemas/actual-equipment'
+          equipment-functional-boundary:
+            type: string
+    holder:
+      description: Represents a space in an equipment in which another equipment can
+        be fitted in the field.
+      allOf:
+      - $ref: '#/components/schemas/local-class'
+      - type: object
+        properties:
+          occupying-fru:
+            type: string
+            description: |-
+              The FRU that is occupying the holder.
+              A holder may be unoccupied.
+              An FRU may occupy more than one holder (using or blocking are intentionally not distinguished here).
+            x-path: /core-model:control-construct/core-model:equipment/core-model:uuid
+          holder-location:
+            type: string
+            description: The relative position of the holder in the context of its
+              containing equipment along with the position of that containing Equipment
+              (and further recursion).
+          expected-holder:
+            $ref: '#/components/schemas/expected-holder'
+          actual-holder:
+            $ref: '#/components/schemas/actual-holder'
+    actual-holder:
+      $ref: '#/components/schemas/holder-details'
+    expected-holder:
+      $ref: '#/components/schemas/holder-details'
+    actual-equipment:
+      $ref: '#/components/schemas/equipment-detail'
+    expected-equipment:
+      $ref: '#/components/schemas/equipment-detail'
+    control-construct:
+      description: |-
+        Represents control capability/functionality.
+        ControlConstructs communicate with other ControlConstructs through ControlPorts about things within the related ConstraintDomains.
+        The ControlConstruct applies to all Control/Management cases including:
+        - the controller in the Network/Managed Element e.g. an SNMP agent).
+        - an SDN Controller.
+        - an EMS.
+        - an NMS.
+        This specific model follows a subset of the Component-System Pattern.
+
+           Root element for controller southbound APIs.
+      allOf:
+      - $ref: '#/components/schemas/global-class'
+      - type: object
+        properties:
+          top-level-equipment:
+            type: array
+            items:
+              type: string
+              x-path: /core-model:control-construct/core-model:equipment/core-model:uuid
+          equipment:
+            type: array
+            items:
+              $ref: '#/components/schemas/equipment'
+            x-key: uuid
+    connector_schema:
+      allOf:
+      - $ref: '#/components/schemas/connector'
+      - type: object
+        properties:
+          local-id:
+            type: string
+            description: |-
+              An identifier that is unique in the context of some scope that is less than the global scope.
+
+              (This should be considered in the context of Identifier: A property of an entity/role with a value that is unique within an identifier space, where the identifier space is itself unique, and immutable. The identifier therefore represents the identity of the entity/role. An identifier carries no semantics with respect to the purpose of the entity.)
+          name:
+            type: array
+            description: List of names.
+            items:
+              $ref: '#/components/schemas/name-and-value'
+            x-key: value-name
+          label:
+            type: array
+            description: List of labels.
+            items:
+              $ref: '#/components/schemas/name-and-value'
+            x-key: value-name
+          extension:
+            type: array
+            description: List of simple name-value extensions.
+            items:
+              $ref: '#/components/schemas/name-and-value'
+            x-key: value-name
+          operational-state:
+            type: string
+            description: The operational state is used to indicate whether or not
+              the resource is installed and working.
+          administrative-control:
+            type: string
+            description: |-
+              The administrativeControl state provides control of the availability of specific resources without modification to the provisioning of those resources.
+              The value is the current control target. The actual administrativeState may or may not be at target.
+          administrative-state:
+            type: string
+            description: |-
+              Shows whether or not the client has permission to use or has a prohibition against using the resource.
+              The administrative state expresses usage permissions for specific resources without modification to the provisioning of those resources.
+          lifecycle-state:
+            type: string
+            description: 'Used to track the planned deployment, allocation to clients\
+              \ and withdrawal of resources.'
+          address:
+            type: array
+            items:
+              type: string
+              description: One or more descriptions of the location.
+          connector-pac:
+            $ref: '#/components/schemas/connector-pac'
+    contained-holder_schema:
+      allOf:
+      - $ref: '#/components/schemas/holder'
+      - type: object
+        properties:
+          local-id:
+            type: string
+            description: |-
+              An identifier that is unique in the context of some scope that is less than the global scope.
+
+              (This should be considered in the context of Identifier: A property of an entity/role with a value that is unique within an identifier space, where the identifier space is itself unique, and immutable. The identifier therefore represents the identity of the entity/role. An identifier carries no semantics with respect to the purpose of the entity.)
+          name:
+            type: array
+            description: List of names.
+            items:
+              $ref: '#/components/schemas/name-and-value'
+            x-key: value-name
+          label:
+            type: array
+            description: List of labels.
+            items:
+              $ref: '#/components/schemas/name-and-value'
+            x-key: value-name
+          extension:
+            type: array
+            description: List of simple name-value extensions.
+            items:
+              $ref: '#/components/schemas/name-and-value'
+            x-key: value-name
+          operational-state:
+            type: string
+            description: The operational state is used to indicate whether or not
+              the resource is installed and working.
+          administrative-control:
+            type: string
+            description: |-
+              The administrativeControl state provides control of the availability of specific resources without modification to the provisioning of those resources.
+              The value is the current control target. The actual administrativeState may or may not be at target.
+          administrative-state:
+            type: string
+            description: |-
+              Shows whether or not the client has permission to use or has a prohibition against using the resource.
+              The administrative state expresses usage permissions for specific resources without modification to the provisioning of those resources.
+          lifecycle-state:
+            type: string
+            description: 'Used to track the planned deployment, allocation to clients\
+              \ and withdrawal of resources.'
+          address:
+            type: array
+            items:
+              type: string
+              description: One or more descriptions of the location.
+          holder-pac:
+            $ref: '#/components/schemas/holder-pac'
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: operation-key
+    basicAuth:
+      type: http
+      scheme: basic

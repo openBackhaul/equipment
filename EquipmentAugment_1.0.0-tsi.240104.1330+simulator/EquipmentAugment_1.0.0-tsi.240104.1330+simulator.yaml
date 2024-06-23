@@ -1,0 +1,1909 @@
+﻿openapi: 3.0.0
+info:
+  title: EquipmentAugment_1.0.0-tsi.240104.1330+simulator
+  version: 1.0.0
+
+x-gui-paths:
+########################################################################################################################
+#   Representation Layer
+########################################################################################################################
+  /docs:
+    get:
+      operationId: docs
+      summary: 'Represents Swagger API description page'
+      tags:
+        - RepresentationServices
+      responses:
+        '200':
+          description: 'Swagger API description page represented'
+            # Not explixitly described
+        '400':
+          $ref: '#/components/responses/responseForErroredOamRequests'
+        '401':
+          $ref: '#/components/responses/responseForErroredOamRequests'
+        '403':
+          $ref: '#/components/responses/responseForErroredOamRequests'
+        '404':
+          $ref: '#/components/responses/responseForErroredOamRequests'
+        '500':
+          $ref: '#/components/responses/responseForErroredOamRequests'
+        default:
+          $ref: '#/components/responses/responseForErroredOamRequests'
+
+paths:
+########################################################################################################################
+#   Service Layer - Individual Part
+########################################################################################################################
+  /core-model-1-4:network-control-domain=cache/control-construct={mountName}:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getCachedControlConstruct
+      summary: 'Provides ControlConstruct from cache'
+      tags:
+        - IndividualServices
+      security:
+        - apiKeyAuth: []
+      responses:
+        '200':
+          description: 'ControlConstruct provided from cache'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - core-model-1-4:control-construct
+                properties:
+                  core-model-1-4:control-construct:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/control-construct'
+                example:
+                  core-model-1-4:control-construct:
+                    - top-level-equipment:
+                        - 'string'
+                      equipment:
+                        - connector:
+                            - connector: 'outside specification'
+                              orientation: 'outside specification'
+                              pin-layout: 'outside specification'
+                              connector-type: 'outside specification'
+                              role: 'outside specification'
+                              local-id: 'string'
+                              operational-state: 'outside specification'
+                              administrative-control: 'outside specification'
+                              administrative-state: 'outside specification'
+                              lifecycle-state: 'outside specification'
+                              equipment-augment-1-0:connector-pac:
+                                connector-kind: 'string'
+                                outside-label: 'string'
+                                sequence-id: 0
+                          contained-holder:
+                            - occupying-fru: 'string'
+                              holder-location: 'outside specification'
+                              expected-holder:
+                                spatial-properties-of-type:
+                                  height: 'outside specification'
+                                  width: 'outside specification'
+                                  length: 'outside specification'
+                                environmental-rating:
+                                  thermal-rating:
+                                    thermal-rating-name: 'outside specification'
+                                    maximum-temperature: 'outside specification'
+                                    minimum-temperature: 'outside specification'
+                                position:
+                                  relative-position: 'outside specification'
+                                holder-structure:
+                                  holder-category: 'outside specification'
+                                  is-captive: false
+                                  is-guided: false
+                                  is-quantised-space: false
+                                local-id: 'string'
+                                operational-state: 'outside specification'
+                                administrative-control: 'outside specification'
+                                administrative-state: 'outside specification'
+                                lifecycle-state: 'outside specification'
+                              actual-holder:
+                                spatial-properties-of-type:
+                                  height: 'outside specification'
+                                  width: 'outside specification'
+                                  length: 'outside specification'
+                                environmental-rating:
+                                  thermal-rating:
+                                    thermal-rating-name: 'outside specification'
+                                    maximum-temperature: 'outside specification'
+                                    minimum-temperature: 'outside specification'
+                                position:
+                                  relative-position: 'outside specification'
+                                holder-structure:
+                                  holder-category: 'outside specification'
+                                  is-captive: false
+                                  is-guided: false
+                                  is-quantised-space: false
+                                local-id: 'outside specification'
+                                operational-state: 'outside specification'
+                                administrative-control: 'outside specification'
+                                administrative-state: 'outside specification'
+                                lifecycle-state: 'outside specification'
+                              local-id: 'string'
+                              operational-state: 'outside specification'
+                              administrative-control: 'outside specification'
+                              administrative-state: 'outside specification'
+                              lifecycle-state: 'outside specification'
+                              equipment-augment-1-0:holder-pac:
+                                vendor-label: 'string'
+                                outside-label: 'string'
+                                sequence-id: 0
+                          is-field-replaceable: false
+                          function-block:
+                            - 'outside specification'
+                          expected-equipment:
+                            - location:
+                                equipment-location: 'outside specification'
+                                geographical-location: 'outside specification'
+                              structure:
+                                category: 'string'
+                              swappability:
+                                is-hot-swappable: false
+                              physical-properties:
+                                temperature: 'outside specification'
+                              function-enablers:
+                                power-state: 'outside specification'
+                              mechanical-functions:
+                                rotation-speed: 'outside specification'
+                              physical-characteristics:
+                                weight-characeristics: 'outside specification'
+                                fire-characteristics: 'outside specification'
+                                materials: 'outside specification'
+                              mechanical-features: {}
+                              spatial-properties-of-type:
+                                height: 'outside specification'
+                                width: 'outside specification'
+                                length: 'outside specification'
+                              environmental-rating:
+                                thermal-rating:
+                                  thermal-rating-name: 'outside specification'
+                                  maximum-temperature: 'outside specification'
+                                  minimum-temperature: 'outside specification'
+                                power-rating:
+                                  power-rating-name: 'outside specification'
+                                  power-rating-value: 'outside specification'
+                                humidity-rating: 'outside specification'
+                              manufactured-thing:
+                                manufacturer-properties:
+                                  manufacturer-identifier: 'outside specification'
+                                  manufacturer-name: 'string'
+                                equipment-type:
+                                  description: 'outside specification'
+                                  model-identifier: 'outside specification'
+                                  part-type-identifier: 'string'
+                                  type-name: 'outside specification'
+                                  version: 'string'
+                                equipment-instance:
+                                  manufacture-date: 'outside specification'
+                                  serial-number: 'outside specification'
+                                  asset-instance-identifier: 'outside specification'
+                                operator-augmented-equipment-type:
+                                  asset-type-identifier: 'outside specification'
+                                operator-augmented-equipment-instance:
+                                  asset-instance-identifier: 'outside specification'
+                              local-id: 'string'
+                              operational-state: 'string'
+                              administrative-control: 'outside specification'
+                              administrative-state: 'outside specification'
+                              lifecycle-state: 'outside specification'
+                          actual-equipment:
+                            location:
+                              equipment-location: 'outside specification'
+                              geographical-location: 'outside specification'
+                            structure:
+                              category: 'string'
+                            swappability:
+                              is-hot-swappable: false
+                            physical-properties:
+                              temperature: 'string'
+                            function-enablers:
+                              power-state: 'outside specification'
+                            mechanical-functions:
+                              rotation-speed: 'outside specification'
+                            physical-characteristics:
+                              weight-characeristics: 'outside specification'
+                              fire-characteristics: 'outside specification'
+                              materials: 'outside specification'
+                            mechanical-features: {}
+                            spatial-properties-of-type:
+                              height: 'outside specification'
+                              width: 'outside specification'
+                              length: 'outside specification'
+                            environmental-rating:
+                              thermal-rating:
+                                thermal-rating-name: 'outside specification'
+                                maximum-temperature: 'outside specification'
+                                minimum-temperature: 'outside specification'
+                              power-rating:
+                                power-rating-name: 'outside specification'
+                                power-rating-value: 'outside specification'
+                              humidity-rating: 'outside specification'
+                            manufactured-thing:
+                              manufacturer-properties:
+                                manufacturer-identifier: 'outside specification'
+                                manufacturer-name: 'string'
+                              equipment-type:
+                                description: 'outside specification'
+                                model-identifier: 'outside specification'
+                                part-type-identifier: 'string'
+                                type-name: 'outside specification'
+                                version: 'string'
+                              equipment-instance:
+                                manufacture-date: 'string'
+                                serial-number: 'string'
+                                asset-instance-identifier: 'outside specification'
+                              operator-augmented-equipment-type:
+                                asset-type-identifier: 'outside specification'
+                              operator-augmented-equipment-instance:
+                                asset-instance-identifier: 'outside specification'
+                            local-id: 'outside specification'
+                            operational-state: 'string'
+                            administrative-control: 'outside specification'
+                            administrative-state: 'outside specification'
+                            lifecycle-state: 'outside specification'
+                          equipment-functional-boundary: 'outside specification'
+                          external-managed-id:
+                            manager-identifier: 'outside specification'
+                            external-managed-uuid: 'outside specification'
+                          local-id: 'outside specification'
+                          uuid: 'string'
+                          operational-state: 'string'
+                          administrative-control: 'outside specification'
+                          administrative-state: 'outside specification'
+                          lifecycle-state: 'outside specification'
+                      logical-termination-point:
+                        - {}
+                      forwarding-domain:
+                        - {}
+                      profile-collection: {}
+                      external-managed-id:
+                        manager-identifier: 'outside specification'
+                        external-managed-uuid: 'outside specification'
+                      local-id: 'outside specification'
+                      uuid: 'string'
+                      operational-state: 'outside specification'
+                      administrative-control: 'outside specification'
+                      administrative-state: 'outside specification'
+                      lifecycle-state: 'outside specification'
+                      equipment-augment-1-0:control-construct-pac:
+                        external-label: 'string'
+                        last-config-change-timestamp: 'string'
+                      protocol-collection:
+                        protocol:
+                          - protocol-name: 'string'
+                            external-managed-id:
+                              manager-identifier: 'outside specification'
+                              external-managed-uuid: 'outside specification'
+                            local-id: 'outside specification'
+                            uuid: 'string'
+                            operational-state: 'outside specification'
+                            administrative-control: 'outside specification'
+                            administrative-state: 'outside specification'
+                            lifecycle-state: 'outside specification'
+          headers:
+            x-correlator:
+              $ref: '#/components/headers/x-correlator'
+            exec-time:
+              $ref: '#/components/headers/exec-time'
+            backend-time:
+              $ref: '#/components/headers/backend-time'
+            life-cycle-state:
+              $ref: '#/components/headers/life-cycle-state'
+        '4XX':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        '500':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        default:
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+
+  /core-model-1-4:network-control-domain=cache/control-construct={mountName}/equipment={uuid}:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getCachedEquipment
+      summary: 'Provides Equipment from cache'
+      tags:
+        - IndividualServices
+      security:
+        - apiKeyAuth: []
+      responses:
+        '200':
+          description: 'Equipment provided from cache'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - core-model-1-4:equipment
+                properties:
+                  core-model-1-4:equipment:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/equipment'
+                example:
+                  core-model-1-4:equipment:
+                    - connector:
+                        - connector: 'outside specification'
+                          orientation: 'outside specification'
+                          pin-layout: 'outside specification'
+                          connector-type: 'outside specification'
+                          role: 'outside specification'
+                          local-id: 'string'
+                          operational-state: 'outside specification'
+                          administrative-control: 'outside specification'
+                          administrative-state: 'outside specification'
+                          lifecycle-state: 'outside specification'
+                          equipment-augment-1-0:connector-pac:
+                            connector-kind: 'string'
+                            outside-label: 'string'
+                            sequence-id: 0
+                      contained-holder:
+                        - occupying-fru: 'string'
+                          holder-location: 'outside specification'
+                          expected-holder:
+                            spatial-properties-of-type:
+                              height: 'outside specification'
+                              width: 'outside specification'
+                              length: 'outside specification'
+                            environmental-rating:
+                              thermal-rating:
+                                thermal-rating-name: 'outside specification'
+                                maximum-temperature: 'outside specification'
+                                minimum-temperature: 'outside specification'
+                            position:
+                              relative-position: 'outside specification'
+                            holder-structure:
+                              holder-category: 'outside specification'
+                              is-captive: false
+                              is-guided: false
+                              is-quantised-space: false
+                            local-id: 'string'
+                            operational-state: 'outside specification'
+                            administrative-control: 'outside specification'
+                            administrative-state: 'outside specification'
+                            lifecycle-state: 'outside specification'
+                          actual-holder:
+                            spatial-properties-of-type:
+                              height: 'outside specification'
+                              width: 'outside specification'
+                              length: 'outside specification'
+                            environmental-rating:
+                              thermal-rating:
+                                thermal-rating-name: 'outside specification'
+                                maximum-temperature: 'outside specification'
+                                minimum-temperature: 'outside specification'
+                            position:
+                              relative-position: 'outside specification'
+                            holder-structure:
+                              holder-category: 'outside specification'
+                              is-captive: false
+                              is-guided: false
+                              is-quantised-space: false
+                            local-id: 'outside specification'
+                            operational-state: 'outside specification'
+                            administrative-control: 'outside specification'
+                            administrative-state: 'outside specification'
+                            lifecycle-state: 'outside specification'
+                          local-id: 'string'
+                          operational-state: 'outside specification'
+                          administrative-control: 'outside specification'
+                          administrative-state: 'outside specification'
+                          lifecycle-state: 'outside specification'
+                          equipment-augment-1-0:holder-pac:
+                            vendor-label: 'string'
+                            outside-label: 'string'
+                            sequence-id: 0
+                      is-field-replaceable: false
+                      function-block:
+                        - 'outside specification'
+                      expected-equipment:
+                        - location:
+                            equipment-location: 'outside specification'
+                            geographical-location: 'outside specification'
+                          structure:
+                            category: 'string'
+                          swappability:
+                            is-hot-swappable: false
+                          physical-properties:
+                            temperature: 'outside specification'
+                          function-enablers:
+                            power-state: 'outside specification'
+                          mechanical-functions:
+                            rotation-speed: 'outside specification'
+                          physical-characteristics:
+                            weight-characeristics: 'outside specification'
+                            fire-characteristics: 'outside specification'
+                            materials: 'outside specification'
+                          mechanical-features: {}
+                          spatial-properties-of-type:
+                            height: 'outside specification'
+                            width: 'outside specification'
+                            length: 'outside specification'
+                          environmental-rating:
+                            thermal-rating:
+                              thermal-rating-name: 'outside specification'
+                              maximum-temperature: 'outside specification'
+                              minimum-temperature: 'outside specification'
+                            power-rating:
+                              power-rating-name: 'outside specification'
+                              power-rating-value: 'outside specification'
+                            humidity-rating: 'outside specification'
+                          manufactured-thing:
+                            manufacturer-properties:
+                              manufacturer-identifier: 'outside specification'
+                              manufacturer-name: 'string'
+                            equipment-type:
+                              description: 'outside specification'
+                              model-identifier: 'outside specification'
+                              part-type-identifier: 'string'
+                              type-name: 'outside specification'
+                              version: 'string'
+                            equipment-instance:
+                              manufacture-date: 'outside specification'
+                              serial-number: 'outside specification'
+                              asset-instance-identifier: 'outside specification'
+                            operator-augmented-equipment-type:
+                              asset-type-identifier: 'outside specification'
+                            operator-augmented-equipment-instance:
+                              asset-instance-identifier: 'outside specification'
+                          local-id: 'string'
+                          operational-state: 'string'
+                          administrative-control: 'outside specification'
+                          administrative-state: 'outside specification'
+                          lifecycle-state: 'outside specification'
+                      actual-equipment:
+                        location:
+                          equipment-location: 'outside specification'
+                          geographical-location: 'outside specification'
+                        structure:
+                          category: 'string'
+                        swappability:
+                          is-hot-swappable: false
+                        physical-properties:
+                          temperature: 'string'
+                        function-enablers:
+                          power-state: 'outside specification'
+                        mechanical-functions:
+                          rotation-speed: 'outside specification'
+                        physical-characteristics:
+                          weight-characeristics: 'outside specification'
+                          fire-characteristics: 'outside specification'
+                          materials: 'outside specification'
+                        mechanical-features: {}
+                        spatial-properties-of-type:
+                          height: 'outside specification'
+                          width: 'outside specification'
+                          length: 'outside specification'
+                        environmental-rating:
+                          thermal-rating:
+                            thermal-rating-name: 'outside specification'
+                            maximum-temperature: 'outside specification'
+                            minimum-temperature: 'outside specification'
+                          power-rating:
+                            power-rating-name: 'outside specification'
+                            power-rating-value: 'outside specification'
+                          humidity-rating: 'outside specification'
+                        manufactured-thing:
+                          manufacturer-properties:
+                            manufacturer-identifier: 'outside specification'
+                            manufacturer-name: 'string'
+                          equipment-type:
+                            description: 'outside specification'
+                            model-identifier: 'outside specification'
+                            part-type-identifier: 'string'
+                            type-name: 'outside specification'
+                            version: 'string'
+                          equipment-instance:
+                            manufacture-date: 'string'
+                            serial-number: 'string'
+                            asset-instance-identifier: 'outside specification'
+                          operator-augmented-equipment-type:
+                            asset-type-identifier: 'outside specification'
+                          operator-augmented-equipment-instance:
+                            asset-instance-identifier: 'outside specification'
+                        local-id: 'outside specification'
+                        operational-state: 'string'
+                        administrative-control: 'outside specification'
+                        administrative-state: 'outside specification'
+                        lifecycle-state: 'outside specification'
+                      equipment-functional-boundary: 'outside specification'
+                      external-managed-id:
+                        manager-identifier: 'outside specification'
+                        external-managed-uuid: 'outside specification'
+                      local-id: 'outside specification'
+                      uuid: 'string'
+                      operational-state: 'string'
+                      administrative-control: 'outside specification'
+                      administrative-state: 'outside specification'
+                      lifecycle-state: 'outside specification'
+          headers:
+            x-correlator:
+              $ref: '#/components/headers/x-correlator'
+            exec-time:
+              $ref: '#/components/headers/exec-time'
+            backend-time:
+              $ref: '#/components/headers/backend-time'
+            life-cycle-state:
+              $ref: '#/components/headers/life-cycle-state'
+        '4XX':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        '500':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        default:
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+  /core-model-1-4:network-control-domain=cache/control-construct={mountName}/equipment={uuid}/connector={localId}:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/localId'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getCachedConnector
+      summary: 'Provides Connector from cache'
+      tags:
+        - IndividualServices
+      security:
+        - apiKeyAuth: []
+      responses:
+        '200':
+          description: 'Connector provided from cache'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - core-model-1-4:connector
+                properties:
+                  core-model-1-4:connector:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/connector'
+                example:
+                  core-model-1-4:connector:
+                    - connector: 'outside specification'
+                      orientation: 'outside specification'
+                      pin-layout: 'outside specification'
+                      connector-type: 'outside specification'
+                      role: 'outside specification'
+                      local-id: 'string'
+                      operational-state: 'outside specification'
+                      administrative-control: 'outside specification'
+                      administrative-state: 'outside specification'
+                      lifecycle-state: 'outside specification'
+                      equipment-augment-1-0:connector-pac:
+                        connector-kind: 'string'
+                        outside-label: 'string'
+                        sequence-id: 0
+          headers:
+            x-correlator:
+              $ref: '#/components/headers/x-correlator'
+            exec-time:
+              $ref: '#/components/headers/exec-time'
+            backend-time:
+              $ref: '#/components/headers/backend-time'
+            life-cycle-state:
+              $ref: '#/components/headers/life-cycle-state'
+        '4XX':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        '500':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        default:
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+  /core-model-1-4:network-control-domain=cache/control-construct={mountName}/equipment={uuid}/contained-holder={localId}:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/localId'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getCachedContainedHolder
+      summary: 'Provides ContainedHolder from cache'
+      tags:
+        - IndividualServices
+      security:
+        - apiKeyAuth: []
+      responses:
+        '200':
+          description: 'ContainedHolder provided from cache'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - core-model-1-4:contained-holder
+                properties:
+                  core-model-1-4:contained-holder:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/holder'
+                example:
+                  core-model-1-4:contained-holder:
+                    - occupying-fru: 'string'
+                      holder-location: 'outside specification'
+                      expected-holder:
+                        spatial-properties-of-type:
+                          height: 'outside specification'
+                          width: 'outside specification'
+                          length: 'outside specification'
+                        environmental-rating:
+                          thermal-rating:
+                            thermal-rating-name: 'outside specification'
+                            maximum-temperature: 'outside specification'
+                            minimum-temperature: 'outside specification'
+                        position:
+                          relative-position: 'outside specification'
+                        holder-structure:
+                          holder-category: 'outside specification'
+                          is-captive: false
+                          is-guided: false
+                          is-quantised-space: false
+                        local-id: 'outside specification'
+                        operational-state: 'outside specification'
+                        administrative-control: 'outside specification'
+                        administrative-state: 'outside specification'
+                        lifecycle-state: 'outside specification'
+                      actual-holder:
+                        spatial-properties-of-type:
+                          height: 'outside specification'
+                          width: 'outside specification'
+                          length: 'outside specification'
+                        environmental-rating:
+                          thermal-rating:
+                            thermal-rating-name: 'outside specification'
+                            maximum-temperature: 'outside specification'
+                            minimum-temperature: 'outside specification'
+                        position:
+                          relative-position: 'outside specification'
+                        holder-structure:
+                          holder-category: 'outside specification'
+                          is-captive: false
+                          is-guided: false
+                          is-quantised-space: false
+                        local-id: 'outside specification'
+                        operational-state: 'outside specification'
+                        administrative-control: 'outside specification'
+                        administrative-state: 'outside specification'
+                        lifecycle-state: 'outside specification'
+                      local-id: 'string'
+                      operational-state: 'outside specification'
+                      administrative-control: 'outside specification'
+                      administrative-state: 'outside specification'
+                      lifecycle-state: 'outside specification'
+                      equipment-augment-1-0:holder-pac:
+                        vendor-label: 'string'
+                        outside-label: 'string'
+                        sequence-id: 0
+          headers:
+            x-correlator:
+              $ref: '#/components/headers/x-correlator'
+            exec-time:
+              $ref: '#/components/headers/exec-time'
+            backend-time:
+              $ref: '#/components/headers/backend-time'
+            life-cycle-state:
+              $ref: '#/components/headers/life-cycle-state'
+        '4XX':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        '500':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        default:
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+  /core-model-1-4:network-control-domain=cache/control-construct={mountName}/equipment={uuid}/expected-equipment={localId}:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/localId'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getCachedExpectedEquipment
+      summary: 'Provides ExpectedEquipment from cache'
+      tags:
+        - IndividualServices
+      security:
+        - apiKeyAuth: []
+      responses:
+        '200':
+          description: 'ExpectedEquipment provided from cache'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - core-model-1-4:expected-equipment
+                properties:
+                  core-model-1-4:expected-equipment:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/expected-equipment'
+                example:
+                  core-model-1-4:expected-equipment:
+                    - location:
+                        equipment-location: 'outside specification'
+                        geographical-location: 'outside specification'
+                      structure:
+                        category: 'string'
+                      swappability:
+                        is-hot-swappable: false
+                      physical-properties:
+                        temperature: 'outside specification'
+                      function-enablers:
+                        power-state: 'outside specification'
+                      mechanical-functions:
+                        rotation-speed: 'outside specification'
+                      physical-characteristics:
+                        weight-characeristics: 'outside specification'
+                        fire-characteristics: 'outside specification'
+                        materials: 'outside specification'
+                      mechanical-features: {}
+                      spatial-properties-of-type:
+                        height: 'outside specification'
+                        width: 'outside specification'
+                        length: 'outside specification'
+                      environmental-rating:
+                        thermal-rating:
+                          thermal-rating-name: 'outside specification'
+                          maximum-temperature: 'outside specification'
+                          minimum-temperature: 'outside specification'
+                        power-rating:
+                          power-rating-name: 'outside specification'
+                          power-rating-value: 'outside specification'
+                        humidity-rating: 'outside specification'
+                      manufactured-thing:
+                        manufacturer-properties:
+                          manufacturer-identifier: 'outside specification'
+                          manufacturer-name: 'string'
+                        equipment-type:
+                          description: 'outside specification'
+                          model-identifier: 'outside specification'
+                          part-type-identifier: 'string'
+                          type-name: 'outside specification'
+                          version: 'string'
+                        equipment-instance:
+                          manufacture-date: 'outside specification'
+                          serial-number: 'outside specification'
+                          asset-instance-identifier: 'outside specification'
+                        operator-augmented-equipment-type:
+                          asset-type-identifier: 'outside specification'
+                        operator-augmented-equipment-instance:
+                          asset-instance-identifier: 'outside specification'
+                      local-id: 'string'
+                      operational-state: 'string'
+                      administrative-control: 'outside specification'
+                      administrative-state: 'outside specification'
+                      lifecycle-state: 'outside specification'
+          headers:
+            x-correlator:
+              $ref: '#/components/headers/x-correlator'
+            exec-time:
+              $ref: '#/components/headers/exec-time'
+            backend-time:
+              $ref: '#/components/headers/backend-time'
+            life-cycle-state:
+              $ref: '#/components/headers/life-cycle-state'
+        '4XX':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        '500':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        default:
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+  /core-model-1-4:network-control-domain=cache/control-construct={mountName}/equipment={uuid}/actual-equipment:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+      - $ref: '#/components/parameters/uuid'
+      - $ref: '#/components/parameters/fields'
+    get:
+      operationId: getCachedActualEquipment
+      summary: 'Provides ActualEquipment from cache'
+      tags:
+        - IndividualServices
+      security:
+        - apiKeyAuth: []
+      responses:
+        '200':
+          description: 'ActualEquipment provided from cache'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - core-model-1-4:actual-equipment
+                properties:
+                  core-model-1-4:actual-equipment:
+                    $ref: '#/components/schemas/actual-equipment'
+                example:
+                  core-model-1-4:actual-equipment:
+                    location:
+                      equipment-location: 'outside specification'
+                      geographical-location: 'outside specification'
+                    structure:
+                      category: 'string'
+                    swappability:
+                      is-hot-swappable: false
+                    physical-properties:
+                      temperature: 'string'
+                    function-enablers:
+                      power-state: 'outside specification'
+                    mechanical-functions:
+                      rotation-speed: 'outside specification'
+                    physical-characteristics:
+                      weight-characeristics: 'outside specification'
+                      fire-characteristics: 'outside specification'
+                      materials: 'outside specification'
+                    mechanical-features: {}
+                    spatial-properties-of-type:
+                      height: 'outside specification'
+                      width: 'outside specification'
+                      length: 'outside specification'
+                    environmental-rating:
+                      thermal-rating:
+                        thermal-rating-name: 'outside specification'
+                        maximum-temperature: 'outside specification'
+                        minimum-temperature: 'outside specification'
+                      power-rating:
+                        power-rating-name: 'outside specification'
+                        power-rating-value: 'outside specification'
+                      humidity-rating: 'outside specification'
+                    manufactured-thing:
+                      manufacturer-properties:
+                        manufacturer-identifier: 'outside specification'
+                        manufacturer-name: 'string'
+                      equipment-type:
+                        description: 'outside specification'
+                        model-identifier: 'outside specification'
+                        part-type-identifier: 'string'
+                        type-name: 'outside specification'
+                        version: 'string'
+                      equipment-instance:
+                        manufacture-date: 'string'
+                        serial-number: 'string'
+                        asset-instance-identifier: 'outside specification'
+                      operator-augmented-equipment-type:
+                        asset-type-identifier: 'outside specification'
+                      operator-augmented-equipment-instance:
+                        asset-instance-identifier: 'outside specification'
+                    local-id: 'outside specification'
+                    operational-state: 'string'
+                    administrative-control: 'outside specification'
+                    administrative-state: 'outside specification'
+                    lifecycle-state: 'outside specification'
+          headers:
+            x-correlator:
+              $ref: '#/components/headers/x-correlator'
+            exec-time:
+              $ref: '#/components/headers/exec-time'
+            backend-time:
+              $ref: '#/components/headers/backend-time'
+            life-cycle-state:
+              $ref: '#/components/headers/life-cycle-state'
+        '4XX':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        '500':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        default:
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+
+########################################################################################################################
+#   Service Layer - Basic Part
+########################################################################################################################
+
+########################################################################################################################
+#   OAM Layer - Individual Part
+########################################################################################################################
+
+########################################################################################################################
+#   OAM Layer - Basic Part
+########################################################################################################################
+
+########################################################################################################################
+#   Common Components
+########################################################################################################################
+components:
+  parameters:
+    user:
+      name: user
+      in: header
+      required: true
+      schema:
+        type: string
+        example: 'User Name'
+      description: 'User identifier from the system starting the service call'
+    originator:
+      name: originator
+      in: header
+      required: true
+      schema:
+        type: string
+        minLength: 3
+        example: 'Resolver'
+      description: >
+        'Identification for the system consuming the API, as defined in
+         [/core-model-1-4:control-construct/logical-termination-point={uuid}/layer-protocol=0/http-client-interface-1-0:http-client-interface-pac/http-client-interface-configuration/application-name]'
+    x-correlator:
+      name: x-correlator
+      in: header
+      required: true
+      schema:
+        type: string
+        pattern: '^[0-9A-Fa-f]{8}(?:-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$'
+        description: 'Empty string accepted from external applications.'
+        example: '550e8400-e29b-11d4-a716-446655440000'
+      description: 'UUID for the service execution flow that allows to correlate requests and responses'
+    trace-indicator:
+      name: trace-indicator
+      in: header
+      required: true
+      schema:
+        type: string
+        pattern: '^([0-9]+)(\.([0-9]+))*$'
+        description: 'Empty string accepted from external applications.'
+        example: '1.3.1'
+      description: 'Sequence of request numbers along the flow'
+    customer-journey:
+      name: customer-journey
+      in: header
+      required: true
+      schema:
+        type: string
+        example: 'Unknown value'
+      description: 'Holds information supporting customer’s journey to which the execution applies'
+    mountName:
+      name: mountName
+      in: path
+      required: true
+      schema:
+        type: string
+        example: '222250001'
+      description: 'The mountName of the device that is addressed by the request'
+    uuid:
+      name: uuid
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 'LTP-MWPS-TTP-1-1'
+      description: 'Instance identifier that is unique within the device'
+    uuid1:
+      name: uuid1
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 'LTP-MWPS-TTP-1-1'
+      description: 'Another instance identifier that is unique within the device'
+    localId:
+      name: localId
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 'LP-MWPS-TTP-1-1'
+      description: 'Instance identifier that is unique within its list'
+    fields:
+      name: fields
+      in: query
+      required: false
+      schema:
+        type: string
+        example: 'node(node-id;netconf-node-topology:connection-status)'
+      description: 'Query parameter to filter ressources according to RFC8040 fields filter spec'
+  responses:
+    responseForErroredServiceRequests:
+      description: 'Response in case of errored service requests'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/errorDescription'
+      headers:
+        x-correlator:
+          schema:
+            type: string
+            pattern: '^[0-9A-Fa-f]{8}(?:-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$'
+            example: '550e8400-e29b-11d4-a716-446655440000'
+          description: 'UUID for the service execution flow that allows to correlate requests and responses. Its value must be identical at the response compared with its corresponding request'
+        exec-time:
+          schema:
+            type: integer
+            example: 1100
+          description: 'Value written by the service provider, reporting the total elapsed time for the execution, including all the additional processing needed to retrieve the data from the backend service. Expressed in milliseconds'
+        backend-time:
+          schema:
+            type: integer
+            example: 850
+          description: 'Value written by the service provider, reporting the elapsed time for data retrieval from the backend (service invocation, database access…). Expressed in milliseconds'
+    responseForErroredOamRequests:
+      description: 'Response in case of errored OaM requests'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/errorDescription'
+  headers:
+    x-correlator:
+      schema:
+        type: string
+        example: '550e8400-e29b-11d4-a716-446655440000'
+      description: 'UUID for the service execution flow that allows to correlate requests and responses. Its value must be identical at the response compared with its corresponding request'
+    exec-time:
+      schema:
+        type: integer
+        example: 1100
+      description: 'Value written by the service provider, reporting the total elapsed time for the execution, including all the additional processing needed to retrieve the data from the backend service. Expressed in milliseconds'
+    backend-time:
+      schema:
+        type: integer
+        example: 850
+      description: 'Value written by the service provider, reporting the elapsed time for data retrieval from the backend (service invocation, database access…). Expressed in milliseconds'
+    life-cycle-state:
+      schema:
+        type: string
+        enum:
+          - 'EXPERIMENTAL'
+          - 'OPERATIONAL'
+          - 'DEPRECATED'
+          - 'OBSOLETE'
+          - 'UNKNOWN'
+          - 'NOT_YET_DEFINED'
+        example: 'EXPERIMENTAL'
+  schemas:
+    errorDescription:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+
+    control-construct:
+      type: object
+      required:
+        - top-level-equipment
+        - equipment
+        - logical-termination-point
+        - forwarding-domain
+        - profile-collection
+        - uuid
+        - equipment-augment-1-0:control-construct-pac
+        - protocol-collection
+      properties:
+        top-level-equipment:
+          type: array
+          minItems: 1
+          maxItems: 1
+          items:
+            type: string
+        equipment:
+          type: array
+          minItems: 1
+          x-key: uuid
+          items:
+            $ref: '#/components/schemas/equipment'
+        logical-termination-point:
+          type: array
+          minItems: 1
+          x-key: uuid
+          items:
+            $ref: '#/components/schemas/logical-termination-point'
+        forwarding-domain:
+          type: array
+          minItems: 1
+          x-key: uuid
+          items:
+            $ref: '#/components/schemas/forwarding-domain'
+        profile-collection:
+          $ref: '#/components/schemas/profile-collection'
+        external-managed-id:
+          type: object
+          properties:
+            manager-identifier:
+              type: string
+            external-managed-uuid:
+              type: string
+        local-id:
+          type: string
+        uuid:
+          type: string
+        name:
+          type: array
+        label:
+          type: array
+        extension:
+          type: array
+        operational-state:
+          type: string
+        administrative-control:
+          type: string
+        administrative-state:
+          type: string
+        lifecycle-state:
+          type: string
+        address:
+          type: array
+        equipment-augment-1-0:control-construct-pac:
+          type: object
+          required:
+            - external-label
+            - last-config-change-timestamp
+          properties:
+            external-label:
+              type: string
+            last-config-change-timestamp:
+              type: string
+              pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[\+\-]\d{2}:\d{2})$'
+        protocol-collection:
+          type: object
+          properties:
+            protocol:
+              type: array
+              minItems: 0
+              x-key: uuid
+              items:
+                type: object
+                required:
+                  - protocol-name
+                  - uuid
+                properties:
+                  protocol-name:
+                    type: string
+                  external-managed-id:
+                    type: object
+                    properties:
+                      manager-identifier:
+                        type: string
+                      external-managed-uuid:
+                        type: string
+                  local-id:
+                    type: string
+                  uuid:
+                    type: string
+                  name:
+                    type: array
+                  label:
+                    type: array
+                  extension:
+                    type: array
+                  operational-state:
+                    type: string
+                  administrative-control:
+                    type: string
+                  administrative-state:
+                    type: string
+                  lifecycle-state:
+                    type: string
+                  address:
+                    type: array
+
+    equipment:
+      type: object
+      required:
+        - uuid
+        - operational-state
+      properties:
+        connector:
+          type: array
+          minItems: 0
+          x-key: local-id
+          items:
+            $ref: '#/components/schemas/connector'
+        contained-holder:
+          type: array
+          minItems: 0
+          x-key: local-id
+          items:
+            $ref: '#/components/schemas/holder'
+        is-field-replaceable:
+          type: boolean
+        function-block:
+          type: array
+          minItems: 0
+          items:
+            type: string
+        expected-equipment:
+          type: array
+          minItems: 0
+          x-key: local-id
+          items:
+            $ref: '#/components/schemas/expected-equipment'
+        actual-equipment:
+          $ref: '#/components/schemas/actual-equipment'
+        equipment-functional-boundary:
+          type: string
+        external-managed-id:
+          type: object
+          properties:
+            manager-identifier:
+              type: string
+            external-managed-uuid:
+              type: string
+        local-id:
+          type: string
+        uuid:
+          type: string
+        name:
+          type: array
+        label:
+          type: array
+        extension:
+          type: array
+        operational-state:
+          type: string
+          enum:
+            - 'core-model-1-4:OPERATIONAL_STATE_DISABLED'
+            - 'core-model-1-4:OPERATIONAL_STATE_ENABLED'
+        administrative-control:
+          type: string
+        administrative-state:
+          type: string
+        lifecycle-state:
+          type: string
+        address:
+          type: array
+    connector:
+      type: object
+      required:
+        - local-id
+        - equipment-augment-1-0:connector-pac
+      properties:
+        connector:
+          type: string
+        orientation:
+          type: string
+        pin-layout:
+          type: string
+        connector-type:
+          type: string
+        role:
+          type: string
+        local-id:
+          type: string
+        name:
+          type: array
+        label:
+          type: array
+        extension:
+          type: array
+        operational-state:
+          type: string
+        administrative-control:
+          type: string
+        administrative-state:
+          type: string
+        lifecycle-state:
+          type: string
+        address:
+          type: array
+        equipment-augment-1-0:connector-pac:
+          type: object
+          required:
+            - connector-kind
+            - outside-label
+            - sequence-id
+          properties:
+            connector-kind:
+              type: string
+              enum:
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_SC'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_FIBRE_CHANNEL_STYLE_1'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_FIBRE_CHANNEL_STYLE_2'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_BNC'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_FC'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_FIBER_JACK'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_LC'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_MT_RJ'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_MU'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_SG'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_OPTICAL_PIGTAIL'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_MPO1x12'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_MPO2x16'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_HSSDC_II'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_COPPER_PIGTAIL'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_RJ45'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_NO_SEPERABLE_CONNECTOR'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_MXC2x16'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_ST'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_SMA'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_N'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_DIN_1.0_2.3'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_SCSI_50_PIN_1.27MM_PITCH'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_SCSI_FEMALE_68_PIN'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_D_SUB_FEMALE_15_PIN'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_RS-422'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_RS-232'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_RS-485'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_MDR68'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_TNC'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_FLANGE'
+              - 'equipment-augment-1-0:CONNECTOR_KIND_TYPE_NOT_YET_DEFINED'
+            outside-label:
+              type: string
+            sequence-id:
+              type: integer
+              format: int16
+    holder:
+      type: object
+      required:
+        - occupying-fru
+        - local-id
+        - equipment-augment-1-0:holder-pac
+      properties:
+        occupying-fru:
+          type: string
+          minLength: 1
+        holder-location:
+          type: string
+        expected-holder:
+          type: object
+          properties:
+            spatial-properties-of-type:
+              type: object
+              properties:
+                height:
+                  type: string
+                width:
+                  type: string
+                length:
+                  type: string
+            environmental-rating:
+              type: object
+              properties:
+                thermal-rating:
+                  type: object
+                  properties:
+                    thermal-rating-name:
+                      type: string
+                    maximum-temperature:
+                      type: string
+                    minimum-temperature:
+                      type: string
+                power-rating:
+                  type: object
+                  properties:
+                    power-rating-name:
+                      type: string
+                    power-rating-value:
+                      type: string
+                humidity-rating:
+                  type: string
+            position:
+              type: object
+              properties:
+                relative-position:
+                  type: string
+            holder-structure:
+              type: object
+              properties:
+                holder-category:
+                  type: string
+                is-captive:
+                  type: boolean
+                is-guided:
+                  type: boolean
+                is-quantised-space:
+                  type: boolean
+            local-id:
+              type: string
+            name:
+              type: array
+            label:
+              type: array
+            extension:
+              type: array
+            operational-state:
+              type: string
+            administrative-control:
+              type: string
+            administrative-state:
+              type: string
+            lifecycle-state:
+              type: string
+            address:
+              type: array
+        actual-holder:
+          type: object
+          properties:
+            spatial-properties-of-type:
+              type: object
+              properties:
+                height:
+                  type: string
+                width:
+                  type: string
+                length:
+                  type: string
+            environmental-rating:
+              type: object
+              properties:
+                thermal-rating:
+                  type: object
+                  properties:
+                    thermal-rating-name:
+                      type: string
+                    maximum-temperature:
+                      type: string
+                    minimum-temperature:
+                      type: string
+                power-rating:
+                  type: object
+                  properties:
+                    power-rating-name:
+                      type: string
+                    power-rating-value:
+                      type: string
+                humidity-rating:
+                  type: string
+            position:
+              type: object
+              properties:
+                relative-position:
+                  type: string
+            holder-structure:
+              type: object
+              properties:
+                holder-category:
+                  type: string
+                is-captive:
+                  type: boolean
+                is-guided:
+                  type: boolean
+                is-quantised-space:
+                  type: boolean
+            local-id:
+              type: string
+            name:
+              type: array
+            label:
+              type: array
+            extension:
+              type: array
+            operational-state:
+              type: string
+            administrative-control:
+              type: string
+            administrative-state:
+              type: string
+            lifecycle-state:
+              type: string
+            address:
+              type: array
+        local-id:
+          type: string
+        name:
+          type: array
+        label:
+          type: array
+        extension:
+          type: array
+        operational-state:
+          type: string
+        administrative-control:
+          type: string
+        administrative-state:
+          type: string
+        lifecycle-state:
+          type: string
+        address:
+          type: array
+        equipment-augment-1-0:holder-pac:
+          type: object
+          required:
+            - vendor-label
+            - outside-label
+            - sequence-id
+          properties:
+            vendor-label:
+              type: string
+            outside-label:
+              type: string
+            sequence-id:
+              type: integer
+              format: int16
+    expected-equipment:
+      type: object
+      required:
+        - structure
+        - manufactured-thing
+        - local-id
+        - operational-state
+      properties:
+        location:
+          type: object
+          properties:
+            equipment-location:
+              type: string
+            geographical-location:
+              type: string
+        structure:
+          type: object
+          required:
+            - category
+          properties:
+            category:
+              type: string
+              enum:
+                - 'core-model-1-4:EQUIPMENT_CATEGORY_SUBRACK'
+                - 'core-model-1-4:EQUIPMENT_CATEGORY_CIRCUIT_PACK'
+                - 'core-model-1-4:EQUIPMENT_CATEGORY_SMALL_FORMFACTOR_PLUGGABLE'
+                - 'core-model-1-4:EQUIPMENT_CATEGORY_STAND_ALONE_UNIT'
+                - 'core-model-1-4:EQUIPMENT_CATEGORY_RACK'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_BACKPLANE'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_POWER_UNIT'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_BATTERY'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_FAN'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_CENTRAL_PROCESSING_UNIT'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_STORAGE_DRIVE'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_SENSOR'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_MODEM'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_PORT_EXPANSION_BOARD'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_OUTDOOR_UNIT'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_FULL_OUTDOOR_UNIT'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_NOT_YET_DEFINED'
+        swappability:
+          type: object
+          properties:
+            is-hot-swappable:
+              type: boolean
+        physical-properties:
+          type: object
+          properties:
+            temperature:
+              type: string
+        function-enablers:
+          type: object
+          properties:
+            power-state:
+              type: string
+        mechanical-functions:
+          type: object
+          properties:
+            rotation-speed:
+              type: string
+        physical-characteristics:
+          type: object
+          properties:
+            weight-characeristics:
+              type: string
+            fire-characteristics:
+              type: string
+            materials:
+              type: string
+        mechanical-features:
+          type: object
+        spatial-properties-of-type:
+          type: object
+          properties:
+            height:
+              type: string
+            width:
+              type: string
+            length:
+              type: string
+        environmental-rating:
+          type: object
+          properties:
+            thermal-rating:
+              type: object
+              properties:
+                thermal-rating-name:
+                  type: string
+                maximum-temperature:
+                  type: string
+                minimum-temperature:
+                  type: string
+            power-rating:
+              type: object
+              properties:
+                power-rating-name:
+                  type: string
+                power-rating-value:
+                  type: string
+            humidity-rating:
+              type: string
+        manufactured-thing:
+          type: object
+          required:
+            - manufacturer-properties
+            - equipment-type
+          properties:
+            manufacturer-properties:
+              type: object
+              required:
+                - manufacturer-name
+              properties:
+                manufacturer-identifier:
+                  type: string
+                manufacturer-name:
+                  type: string
+            equipment-type:
+              type: object
+              required:
+                - part-type-identifier
+                - version
+              properties:
+                description:
+                  type: string
+                model-identifier:
+                  type: string
+                part-type-identifier:
+                  type: string
+                type-name:
+                  type: string
+                version:
+                  type: string
+            equipment-instance:
+              type: object
+              properties:
+                manufacture-date:
+                  type: string
+                serial-number:
+                  type: string
+                asset-instance-identifier:
+                  type: string
+            operator-augmented-equipment-type:
+              type: object
+              properties:
+                asset-type-identifier:
+                  type: string
+            operator-augmented-equipment-instance:
+              type: object
+              properties:
+                asset-instance-identifier:
+                  type: string
+        local-id:
+          type: string
+        name:
+          type: array
+        label:
+          type: array
+        extension:
+          type: array
+        operational-state:
+          type: string
+          enum:
+            - 'core-model-1-4:OPERATIONAL_STATE_DISABLED'
+            - 'core-model-1-4:OPERATIONAL_STATE_ENABLED'
+        administrative-control:
+          type: string
+        administrative-state:
+          type: string
+        lifecycle-state:
+          type: string
+        address:
+          type: array
+    actual-equipment:
+      type: object
+      required:
+        - structure
+        - physical-properties
+        - manufactured-thing
+        - operational-state
+      properties:
+        location:
+          type: object
+          properties:
+            equipment-location:
+              type: string
+            geographical-location:
+              type: string
+        structure:
+          type: object
+          required:
+            - category
+          properties:
+            category:
+              type: string
+              enum:
+                - 'core-model-1-4:EQUIPMENT_CATEGORY_SUBRACK'
+                - 'core-model-1-4:EQUIPMENT_CATEGORY_CIRCUIT_PACK'
+                - 'core-model-1-4:EQUIPMENT_CATEGORY_SMALL_FORMFACTOR_PLUGGABLE'
+                - 'core-model-1-4:EQUIPMENT_CATEGORY_STAND_ALONE_UNIT'
+                - 'core-model-1-4:EQUIPMENT_CATEGORY_RACK'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_BACKPLANE'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_POWER_UNIT'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_BATTERY'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_FAN'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_CENTRAL_PROCESSING_UNIT'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_STORAGE_DRIVE'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_SENSOR'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_MODEM'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_PORT_EXPANSION_BOARD'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_OUTDOOR_UNIT'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_FULL_OUTDOOR_UNIT'
+                - 'equipment-augment-1-0:EQUIPMENT_CATEGORY_NOT_YET_DEFINED'
+        swappability:
+          type: object
+          properties:
+            is-hot-swappable:
+              type: boolean
+        physical-properties:
+          type: object
+          required:
+            - temperature
+          properties:
+            temperature:
+              type: string
+        function-enablers:
+          type: object
+          properties:
+            power-state:
+              type: string
+        mechanical-functions:
+          type: object
+          properties:
+            rotation-speed:
+              type: string
+        physical-characteristics:
+          type: object
+          properties:
+            weight-characeristics:
+              type: string
+            fire-characteristics:
+              type: string
+            materials:
+              type: string
+        mechanical-features:
+          type: object
+        spatial-properties-of-type:
+          type: object
+          properties:
+            height:
+              type: string
+            width:
+              type: string
+            length:
+              type: string
+        environmental-rating:
+          type: object
+          properties:
+            thermal-rating:
+              type: object
+              properties:
+                thermal-rating-name:
+                  type: string
+                maximum-temperature:
+                  type: string
+                minimum-temperature:
+                  type: string
+            power-rating:
+              type: object
+              properties:
+                power-rating-name:
+                  type: string
+                power-rating-value:
+                  type: string
+            humidity-rating:
+              type: string
+        manufactured-thing:
+          type: object
+          required:
+            - manufacturer-properties
+            - equipment-type
+            - equipment-instance
+          properties:
+            manufacturer-properties:
+              type: object
+              required:
+                - manufacturer-name
+              properties:
+                manufacturer-identifier:
+                  type: string
+                manufacturer-name:
+                  type: string
+            equipment-type:
+              type: object
+              required:
+                - part-type-identifier
+                - version
+              properties:
+                description:
+                  type: string
+                model-identifier:
+                  type: string
+                part-type-identifier:
+                  type: string
+                type-name:
+                  type: string
+                version:
+                  type: string
+            equipment-instance:
+              type: object
+              required:
+                - manufacture-date
+                - serial-number
+              properties:
+                manufacture-date:
+                  type: string
+                  pattern: '^\d{4}-\d{2}-\d{2}$'
+                serial-number:
+                  type: string
+                asset-instance-identifier:
+                  type: string
+            operator-augmented-equipment-type:
+              type: object
+              properties:
+                asset-type-identifier:
+                  type: string
+            operator-augmented-equipment-instance:
+              type: object
+              properties:
+                asset-instance-identifier:
+                  type: string
+        local-id:
+          type: string
+        name:
+          type: array
+        label:
+          type: array
+        extension:
+          type: array
+        operational-state:
+          type: string
+          enum:
+            - 'core-model-1-4:OPERATIONAL_STATE_DISABLED'
+            - 'core-model-1-4:OPERATIONAL_STATE_ENABLED'
+        administrative-control:
+          type: string
+        administrative-state:
+          type: string
+        lifecycle-state:
+          type: string
+        address:
+          type: array
+
+    profile-collection:
+      type: object
+
+    logical-termination-point:
+      type: object
+
+    forwarding-domain:
+      type: object
+
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: operation-key
+    basicAuth:
+      type: http
+      scheme: basic
