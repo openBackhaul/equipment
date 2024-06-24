@@ -5,7 +5,6 @@
 - 1.0.0-tsi.d.t : Model for the Transport SDN Introduction at Telefonica Germany
 
 ### Equipment Specification
-- [TransmitterEquipment_1.0.0-tsp.200715.1225+spec.1](./TransmitterEquipment_1.0.0-tsp.200715.1225+spec.1.pdf)
 - [Equipment_3.0.0-tsi.240624.0950+spec.1_changes](./Equipment_3.0.0-tsi.240624.0950+spec.1_changes.pdf)
 - [Equipment_3.0.0-tsi.240624.0950+spec.1](./Equipment_3.0.0-tsi.240624.0950+spec.1.pdf)
 
