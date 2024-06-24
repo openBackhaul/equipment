@@ -5,7 +5,7 @@
 - 1.0.0-tsi.d.t : Model for the Transport SDN Introduction at Telefonica Germany
 
 ### TransmitterEquipment Specification
-- [TransmitterEquipment_1.0.0-tsp.200715.1225+spec.1](./TransmitterEquipment_1.0.0-tsp.200715.1225+spec.1.pdf) (agreed on the ONF 5G-xhaul call on 15th of July 2020)
+- [TransmitterEquipment_2.0.0-tsi.240104.1625+spec.1](./TransmitterEquipment_2.0.0-tsi.240104.1625+spec.1.pdf)  
 
 ### UML
 - [EquipmentAugment_1.0.0-tsi.240104.1330](./EquipmentAugment_1.0.0-tsi.240104.1330.zip)
