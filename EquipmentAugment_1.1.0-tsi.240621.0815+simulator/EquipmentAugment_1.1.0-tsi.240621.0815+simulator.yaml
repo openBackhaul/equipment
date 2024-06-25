@@ -1,6 +1,6 @@
 ﻿openapi: 3.0.0
 info:
-  title: EquipmentAugment_1.0.0-tsi.240104.1330+simulator
+  title: EquipmentAugment_1.1.0-tsi.240621.0815+simulator
   version: 1.0.0
 
 x-gui-paths:
@@ -240,6 +240,8 @@ paths:
                                 part-type-identifier: 'string'
                                 type-name: 'outside specification'
                                 version: 'string'
+                                outside-label: 'string'
+                                lct-label: 'string'
                               equipment-instance:
                                 manufacture-date: 'string'
                                 serial-number: 'string'
@@ -280,6 +282,7 @@ paths:
                       equipment-augment-1-0:control-construct-pac:
                         external-label: 'string'
                         last-config-change-timestamp: 'string'
+                        device-model-name: 'string'
                       protocol-collection:
                         protocol:
                           - protocol-name: 'string'
@@ -512,6 +515,8 @@ paths:
                             part-type-identifier: 'string'
                             type-name: 'outside specification'
                             version: 'string'
+                            outside-label: 'string'
+                            lct-label: 'string'
                           equipment-instance:
                             manufacture-date: 'string'
                             serial-number: 'string'
@@ -892,6 +897,8 @@ paths:
                         part-type-identifier: 'string'
                         type-name: 'outside specification'
                         version: 'string'
+                        outside-label: 'string'
+                        lct-label: 'string'
                       equipment-instance:
                         manufacture-date: 'string'
                         serial-number: 'string'
@@ -905,6 +912,57 @@ paths:
                     administrative-control: 'outside specification'
                     administrative-state: 'outside specification'
                     lifecycle-state: 'outside specification'
+          headers:
+            x-correlator:
+              $ref: '#/components/headers/x-correlator'
+            exec-time:
+              $ref: '#/components/headers/exec-time'
+            backend-time:
+              $ref: '#/components/headers/backend-time'
+            life-cycle-state:
+              $ref: '#/components/headers/life-cycle-state'
+        '4XX':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        '500':
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+        default:
+          $ref: '#/components/responses/responseForErroredServiceRequests'
+
+  /core-model-1-4:network-control-domain=live/control-construct={mountName}/restart:
+    parameters:
+      - $ref: '#/components/parameters/user'
+      - $ref: '#/components/parameters/originator'
+      - $ref: '#/components/parameters/x-correlator'
+      - $ref: '#/components/parameters/trace-indicator'
+      - $ref: '#/components/parameters/customer-journey'
+      - $ref: '#/components/parameters/mountName'
+    post:
+      operationId: postLiveRestart
+      summary: 'Restarts device in Live!'
+      tags:
+        - IndividualServices
+      security:
+        - apiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - kind-of-restart
+                - affected-component-path
+              properties:
+                kind-of-restart:
+                  type: string
+                  enum:
+                    - 'RESTART_TYPE_COLD'
+                    - 'RESTART_TYPE_WARM'
+                affected-component-path:
+                  type: string
+      responses:
+        '204':
+          description: 'Device restarts in Live'
           headers:
             x-correlator:
               $ref: '#/components/headers/x-correlator'
@@ -1165,12 +1223,15 @@ components:
           required:
             - external-label
             - last-config-change-timestamp
+            - device-model-name
           properties:
             external-label:
               type: string
             last-config-change-timestamp:
               type: string
               pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[\+\-]\d{2}:\d{2})$'
+            device-model-name:
+              type: string
         protocol-collection:
           type: object
           properties:
@@ -1834,6 +1895,8 @@ components:
               required:
                 - part-type-identifier
                 - version
+                - outside-label
+                - lct-label
               properties:
                 description:
                   type: string
@@ -1844,6 +1907,10 @@ components:
                 type-name:
                   type: string
                 version:
+                  type: string
+                outside-label:
+                  type: string
+                lct-label:
                   type: string
             equipment-instance:
               type: object
