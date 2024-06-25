@@ -1,0 +1,17 @@
+ [
+	{
+		"dummyUri": "ping.openBackhaul.com",
+		"pathToControlConstruct": "http://ip-address:port/core-model-1-4:network-control-domain=cache/control-construct={mountName}",
+		"mountName": "513250008",
+		"uuid" : "",
+		"uuid1" : "",
+		"localId" : "",
+		"authorizationCode": "your-authorization-code-in-case-of-basic-auth",
+		"operationKey": "Operation key not yet provided.",
+		"userName": "Thorsten Heinze",
+		"originator": "InterfaceValidator_TR532v2.0",
+		"xCorrelator": "00000000-0000-0000-0000-000000000532",
+		"traceIndicator": "1",
+		"customerJourney": ""
+	}
+]
