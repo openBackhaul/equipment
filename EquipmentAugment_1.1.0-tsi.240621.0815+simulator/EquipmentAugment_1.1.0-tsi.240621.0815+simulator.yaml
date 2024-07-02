@@ -240,8 +240,9 @@ paths:
                                 part-type-identifier: 'string'
                                 type-name: 'outside specification'
                                 version: 'string'
-                                outside-label: 'string'
-                                lct-label: 'string'
+                                equipment-augment-1-0:equipment-type-pac:
+                                  outside-label: 'string'
+                                  lct-label: 'string'
                               equipment-instance:
                                 manufacture-date: 'string'
                                 serial-number: 'string'
@@ -515,8 +516,9 @@ paths:
                             part-type-identifier: 'string'
                             type-name: 'outside specification'
                             version: 'string'
-                            outside-label: 'string'
-                            lct-label: 'string'
+                            equipment-augment-1-0:equipment-type-pac:
+                              outside-label: 'string'
+                              lct-label: 'string'
                           equipment-instance:
                             manufacture-date: 'string'
                             serial-number: 'string'
@@ -897,8 +899,9 @@ paths:
                         part-type-identifier: 'string'
                         type-name: 'outside specification'
                         version: 'string'
-                        outside-label: 'string'
-                        lct-label: 'string'
+                        equipment-augment-1-0:equipment-type-pac:
+                          outside-label: 'string'
+                          lct-label: 'string'
                       equipment-instance:
                         manufacture-date: 'string'
                         serial-number: 'string'
@@ -956,8 +959,8 @@ paths:
                 kind-of-restart:
                   type: string
                   enum:
-                    - 'RESTART_TYPE_COLD'
-                    - 'RESTART_TYPE_WARM'
+                    - 'equipment-augment-1-0:RESTART_TYPE_COLD'
+                    - 'equipment-augment-1-0:RESTART_TYPE_WARM'
                 affected-component-path:
                   type: string
       responses:
@@ -1895,8 +1898,7 @@ components:
               required:
                 - part-type-identifier
                 - version
-                - outside-label
-                - lct-label
+                - equipment-augment-1-0:equipment-type-pac
               properties:
                 description:
                   type: string
@@ -1908,10 +1910,16 @@ components:
                   type: string
                 version:
                   type: string
-                outside-label:
-                  type: string
-                lct-label:
-                  type: string
+                equipment-augment-1-0:equipment-type-pac:
+                  type: object
+                  required:
+                    - outside-label
+                    - lct-label
+                  properties:
+                    outside-label:
+                      type: string
+                    lct-label:
+                      type: string
             equipment-instance:
               type: object
               required:

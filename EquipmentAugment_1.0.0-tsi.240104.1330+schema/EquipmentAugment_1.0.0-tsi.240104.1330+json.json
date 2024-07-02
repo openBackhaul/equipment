@@ -1,0 +1,107 @@
+{
+    "type": "object",
+    "required": [
+        "core-model-1-4:equipment"
+    ],
+    "properties": {
+        "core-model-1-4:equipment": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "uuid",
+                    "operational-state",
+                    "expected-equipment",
+                    "actual-equipment"
+                ],
+                "properties": {
+                    "connector": {
+                        "type": "array",
+                        "minItems": 0,
+                        "x-key": "local-id",
+                        "items": {
+                            "type": "object"
+                        }
+                    },
+                    "contained-holder": {
+                        "type": "array",
+                        "minItems": 0,
+                        "x-key": "local-id",
+                        "items": {
+                            "type": "object"
+                        }
+                    },
+                    "is-field-replaceable": {
+                        "type": "boolean"
+                    },
+                    "function-block": {
+                        "type": "array",
+                        "minItems": 0,
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "expected-equipment": {
+                        "type": "array",
+                        "minItems": 0,
+                        "x-key": "local-id",
+                        "items": {
+                            "type": "object"
+                        }
+                    },
+                    "actual-equipment": {
+                        "type": "object"
+                    },
+                    "equipment-functional-boundary": {
+                        "type": "string"
+                    },
+                    "external-managed-id": {
+                        "type": "object",
+                        "properties": {
+                            "manager-identifier": {
+                                "type": "string"
+                            },
+                            "external-managed-uuid": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "local-id": {
+                        "type": "string"
+                    },
+                    "uuid": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "array"
+                    },
+                    "label": {
+                        "type": "array"
+                    },
+                    "extension": {
+                        "type": "array"
+                    },
+                    "operational-state": {
+                        "type": "string",
+                        "enum": [
+                            "core-model-1-4:OPERATIONAL_STATE_DISABLED",
+                            "core-model-1-4:OPERATIONAL_STATE_ENABLED"
+                        ]
+                    },
+                    "administrative-control": {
+                        "type": "string"
+                    },
+                    "administrative-state": {
+                        "type": "string"
+                    },
+                    "lifecycle-state": {
+                        "type": "string"
+                    },
+                    "address": {
+                        "type": "array"
+                    }
+                }
+            }
+        }
+    }
+}
