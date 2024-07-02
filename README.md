@@ -37,7 +37,7 @@
 
 ### Interface Validator
 - [EquipmentAugment_1.0.0-tsi.240104.1330+validator](./EquipmentAugment_1.0.0-tsi.240104.1330+validator/)  
-- [EquipmentAugment_1.1.0-tsi.240621.0815+validator](./EquipmentAugment_1.1.0-tsi.240621.0815+validator/)  
+- [EquipmentAugment_1.1.0-tsi.240621.0815+validator](./EquipmentAugment_1.1.0-tsi.240621.0815+validator/)   (not yet updated)
 
 ### Publication
 - Candidate for future LinuxFoundation Specification
