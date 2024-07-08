@@ -1,0 +1,36 @@
+ [
+	{
+		"mode": "analysis",
+		"serverList": [
+			{
+				"serverName": "dummy",
+				"dummyUri": "ping.openBackhaul.com"
+			},
+			{
+				"serverName": "mwdi",
+				"server": "http://ip.add.re.ss:port",
+				"pathToControlConstruct": "/core-model-1-4:network-control-domain=cache/control-construct={mountName}",
+				"authorizationCode": "authorizationCode",
+				"operationKey": "Operation key not yet provided.",
+				"userName": "userName",
+				"originator": "EquipmentAugment_1.1.0-tsi.240621.0815+validator",
+				"xCorrelator": "00000000-0000-0000-0000-000000000532",
+				"traceIndicator": "1",
+				"customerJourney": ""
+			},
+			{
+				"serverName": "controller",
+				"server": "http://ip.add.re.ss:port",
+				"pathToControlConstruct": "/rests/data/network-topology:network-topology/topology=topology-netconf/node={mountName}/yang-ext:mount/core-model-1-4:control-construct",
+				"authorizationCode": "authorizationCode"
+			}
+		],
+		"collectionInputList": [
+			{
+				"collectionName": "EquipmentAugment",
+				"serverToBeApplied": "controller",
+				"mountName": "513250004"
+			}
+		]
+	}
+]
