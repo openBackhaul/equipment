@@ -84,9 +84,7 @@
 									"    // list of inputs to individual test case collections\r",
 									"    // serverToBeApplied : server that shall be addressed in the respective request/test case\r",
 									"    // mountName : mountName of the device that is to be validated\r",
-									"    // uuid of the object that is to be validated\r",
-									"    // localId of the object that is to be validated\r",
-									"\r",
+									"    // kindOfRestart : cold/warm input for /restart()\r",
 									"\r",
 									"    pm.environment.set(\"mode\", mode);\r",
 									"    pm.environment.set(\"logLevel\", logLevel);\r",
@@ -619,8 +617,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -1078,8 +1075,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -1581,8 +1577,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -2060,8 +2055,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -2713,8 +2707,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -3442,8 +3435,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -4184,8 +4176,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -4548,8 +4539,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						}
@@ -4905,8 +4895,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -5404,8 +5393,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -5883,8 +5871,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -6536,8 +6523,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -7262,8 +7248,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -8000,8 +7985,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -8361,8 +8345,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						}
@@ -8716,8 +8699,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -9201,8 +9183,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -9683,8 +9664,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -10412,8 +10392,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -11153,8 +11132,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -11517,8 +11495,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						}
@@ -11872,8 +11849,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -12356,8 +12332,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -12838,8 +12813,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -13567,8 +13541,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -14308,8 +14281,7 @@
 									"host": [
 										"{{uri}}"
 									]
-								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								}
 							},
 							"response": []
 						},
@@ -14672,8 +14644,645 @@
 									"host": [
 										"{{uri}}"
 									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "RPC",
+					"item": [
+						{
+							"name": "top-level-equipment",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"/****************************************************************************************\r",
+											"* Loading Input Data\r",
+											"****************************************************************************************/\r",
+											"var uri;\r",
+											"var dummyUri;\r",
+											"var collectionInfo;\r",
+											"try {\r",
+											"    uri = pm.variables.get(\"uri\");\r",
+											"\r",
+											"    let serverList;\r",
+											"    serverList = pm.environment.get(\"serverList\");\r",
+											"    let dummyServerInfo;\r",
+											"    dummyServerInfo = ExtractServerInformation(serverList, \"dummy\");\r",
+											"    dummyUri = dummyServerInfo.dummyUri;\r",
+											"\r",
+											"    let collectionInputList;\r",
+											"    collectionInputList = pm.environment.get(\"collectionInputList\");\r",
+											"    collectionInfo = ExtractCollectionInput(collectionInputList, \"EquipmentAugment\");\r",
+											"\r",
+											"} catch (error) {\r",
+											"    logger.error(\"! Input data could not be loaded.\")\r",
+											"}\r",
+											"\r",
+											"\r",
+											"/****************************************************************************************\r",
+											"* Extracting Result\r",
+											"****************************************************************************************/\r",
+											"var responseCode;\r",
+											"var responseObject = {};\r",
+											"var topLevelEquipment;\r",
+											"try {\r",
+											"    if ( uri != dummyUri ) {\r",
+											"        let response;\r",
+											"        response = pm.response;\r",
+											"\r",
+											"        responseCode = parseInt(response.code);\r",
+											"\r",
+											"        if ( Math.floor(responseCode/100) === 2 ) {\r",
+											"            responseObject = JSON.parse(response.stream);\r",
+											"\r",
+											"            logger.log(\"Analysis:\");\r",
+											"            try {\r",
+											"                let topLevelEquipmentList = [];\r",
+											"                if ( collectionInfo.serverToBeApplied == \"controller\" ) {\r",
+											"                    topLevelEquipmentList = responseObject[\"core-model-1-4:control-construct\"][\"top-level-equipment\"];\r",
+											"                } else {\r",
+											"                    topLevelEquipmentList = responseObject[\"core-model-1-4:control-construct\"][0][\"top-level-equipment\"];\r",
+											"                };\r",
+											"                if ( topLevelEquipmentList.length > 0 ) {\r",
+											"                    topLevelEquipment = topLevelEquipmentList[0];\r",
+											"                } else {\r",
+											"                    throw error\r",
+											"                };\r",
+											"                logger.log(\"  - topLevelEquipment: \" + topLevelEquipment)\r",
+											"\r",
+											"            } catch (error) {\r",
+											"                pm.test(\"topLevelEquipment could be loaded\", function () {\r",
+											"                    pm.expect(false).to.be.true\r",
+											"                });\r",
+											"                logger.error(\"  - topLevelEquipment could not be loaded.\");\r",
+											"                topLevelEquipment = \"\"\r",
+											"            }\r",
+											"\r",
+											"        }\r",
+											"\r",
+											"    }\r",
+											"\r",
+											"} catch (error) {\r",
+											"    logger.error(\"! result could not be extracted.\")\r",
+											"}\r",
+											"\r",
+											"\r",
+											"/****************************************************************************************\r",
+											"* Processing\r",
+											"****************************************************************************************/\r",
+											"\r",
+											"\r",
+											"/****************************************************************************************\r",
+											"* Setting Collection Variables\r",
+											"****************************************************************************************/\r",
+											"try {\r",
+											"    pm.collectionVariables.set(\"topLevelEquipment\", topLevelEquipment)\r",
+											"\r",
+											"} catch (error) {\r",
+											"    logger.error(\"! collection variables could not be set.\")\r",
+											"}\r",
+											"\r",
+											"\r",
+											"/****************************************************************************************\r",
+											"* Functions\r",
+											"****************************************************************************************/\r",
+											"function ExtractServerInformation(serverList, searchedServerName) {\r",
+											"    try {\r",
+											"        for(let i=0; i<serverList.length; i++) {\r",
+											"            if(serverList[i].serverName==searchedServerName) {\r",
+											"                return serverList[i]\r",
+											"            }\r",
+											"        }\r",
+											"    } catch (error) {\r",
+											"        logger.error(\"! serverList not found or faulty\");\r",
+											"        return {}\r",
+											"    }\r",
+											"    logger.warn(\"Server could not be found in serverList.\");\r",
+											"    return {}\r",
+											"}\r",
+											"\r",
+											"function ExtractCollectionInput(collectionInputList, searchedCollection) {\r",
+											"    try {\r",
+											"        for(let i=0; i<collectionInputList.length; i++) {\r",
+											"            if(collectionInputList[i].collectionName==searchedCollection) {\r",
+											"                return collectionInputList[i]\r",
+											"            }\r",
+											"        }\r",
+											"    } catch (error) {\r",
+											"        logger.error(\"! collectionInputList not found or faulty\");\r",
+											"        return {}\r",
+											"    }\r",
+											"    logger.warn(\"Collection could not be found in collectionInputList.\");\r",
+											"    return {}\r",
+											"}\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
 								},
-								"description": "StartFragment/****\\* \\* CapabilityCompleteness\\* \\* This Request is for validating WireInterface Capability Objects against definition \\* WireInterface_2.0.0-tsi.240104.1045\\* \\* as it can be found on [https://github.com/openBackhaul/wireInterface/tree/tsp](https://github.com/openBackhaul/wireInterface/tree/tsp)_\\* It checks for \\\\_ - reachability of the Capability class\\* - availability of all attributes in the class and subordinate layers\\* - correct datatypes\\* - correct enumeration values\\* - no additional, vendor specific amendments****\\*/  \nEndFragment"
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"logger.struc(\"\\n===== TopLevelEquipment ===================================================================\");\r",
+											"\r",
+											"\r",
+											"/****************************************************************************************\r",
+											"* Loading Input Data\r",
+											"****************************************************************************************/\r",
+											"var collectionInfo = {};\r",
+											"var serverInfo = {};\r",
+											"var dummyServerInfo = {};\r",
+											"try {\r",
+											"    let collectionInputList;\r",
+											"    collectionInputList = pm.environment.get(\"collectionInputList\");\r",
+											"    collectionInfo = ExtractCollectionInput(collectionInputList, \"EquipmentAugment\");\r",
+											"\r",
+											"    let serverToBeApplied;\r",
+											"    serverToBeApplied = collectionInfo.serverToBeApplied;\r",
+											"    let serverList;\r",
+											"    serverList = pm.environment.get(\"serverList\");\r",
+											"    serverInfo = ExtractServerInformation(serverList, serverToBeApplied);\r",
+											"    dummyServerInfo = ExtractServerInformation(serverList, \"dummy\")\r",
+											"\r",
+											"} catch (error) {\r",
+											"    logger.error(\"! Input data could not be loaded.\")\r",
+											"}\r",
+											"\r",
+											"\r",
+											"/****************************************************************************************\r",
+											"* Processing\r",
+											"****************************************************************************************/\r",
+											"\r",
+											"\r",
+											"/****************************************************************************************\r",
+											"* Setting Local Variables and Preparing the Request\r",
+											"****************************************************************************************/\r",
+											"try {\r",
+											"    let filters;\r",
+											"    filters = \"?fields=top-level-equipment\";\r",
+											"\r",
+											"    let resourcePath;\r",
+											"    resourcePath = \"\";\r",
+											"\r",
+											"    let pathToControlConstruct;\r",
+											"    pathToControlConstruct = serverInfo.pathToControlConstruct;\r",
+											"    let mountName;\r",
+											"    mountName = collectionInfo.mountName;\r",
+											"    pathToControlConstruct = FillMountNameIntoPath(pathToControlConstruct, mountName);\r",
+											"\r",
+											"    let server;\r",
+											"    server = serverInfo.server;\r",
+											"\r",
+											"    let uri;\r",
+											"    if (mountName!=\"\") {\r",
+											"        uri = server + pathToControlConstruct + resourcePath + filters\r",
+											"    } else {\r",
+											"        logger.warn(\"Input data incomplete.\");\r",
+											"        uri = dummyServerInfo.dummyUri\r",
+											"    }\r",
+											"\r",
+											"    let requestBody;\r",
+											"    requestBody = '{}';\r",
+											"\r",
+											"\r",
+											"    pm.variables.clear();\r",
+											"\r",
+											"    pm.variables.set(\"uri\", uri);\r",
+											"    pm.variables.set(\"requestBody\", requestBody);\r",
+											"    \r",
+											"    pm.request.headers.upsert({ key: \"Authorization\", value: serverInfo.authorizationCode });\r",
+											"    pm.request.headers.upsert({ key: \"operation-key\", value: serverInfo.operationKey });\r",
+											"    pm.request.headers.upsert({ key: \"user\", value: serverInfo.userName });\r",
+											"    pm.request.headers.upsert({ key: \"originator\", value: serverInfo.originator });\r",
+											"    pm.request.headers.upsert({ key: \"x-correlator\", value: serverInfo.xCorrelator });\r",
+											"    pm.request.headers.upsert({ key: \"trace-indicator\", value: serverInfo.traceIndicator });\r",
+											"    pm.request.headers.upsert({ key: \"customer-journey\", value: serverInfo.customerJourney });\r",
+											"\r",
+											"    pm.request.headers.upsert({ key: \"Accept\", value: \"application/json\" });\r",
+											"    pm.request.headers.upsert({ key: \"Content-Type\", value: \"application/json\" })\r",
+											"\r",
+											"} catch (error) {\r",
+											"    logger.error(\"! Local variables could not be set.\")\r",
+											"}\r",
+											"\r",
+											"\r",
+											"/****************************************************************************************\r",
+											"* Functions\r",
+											"****************************************************************************************/\r",
+											"function FillUuidIntoPath(path, uuid) {\r",
+											"    if ( (uuid!=undefined) && (uuid!=null) && (uuid!=\"\") ) {\r",
+											"      let subStringToBeReplaced = \"{uuid}\";\r",
+											"      let indexOfStartOfSubStringToBeReplaced = path.lastIndexOf(subStringToBeReplaced);\r",
+											"      let precedingSubString = path.slice(0, indexOfStartOfSubStringToBeReplaced);\r",
+											"      let indexOfEndOfSubStringToBeReplaced = indexOfStartOfSubStringToBeReplaced + subStringToBeReplaced.length;\r",
+											"      let subsequentSubString = path.slice(indexOfEndOfSubStringToBeReplaced);\r",
+											"      path = precedingSubString + uuid + subsequentSubString;\r",
+											"      return path\r",
+											"    } else {\r",
+											"      return path\r",
+											"    }\r",
+											"}\r",
+											"\r",
+											"function FillLocalIdIntoPath(path, localId) {\r",
+											"    if ( (localId!=undefined) && (localId!=null) && (localId!=\"\") ) {\r",
+											"      let subStringToBeReplaced = \"{localId}\";\r",
+											"      let indexOfStartOfSubStringToBeReplaced = path.lastIndexOf(subStringToBeReplaced);\r",
+											"      let precedingSubString = path.slice(0, indexOfStartOfSubStringToBeReplaced);\r",
+											"      let indexOfEndOfSubStringToBeReplaced = indexOfStartOfSubStringToBeReplaced + subStringToBeReplaced.length;\r",
+											"      let subsequentSubString = path.slice(indexOfEndOfSubStringToBeReplaced);\r",
+											"      path = precedingSubString + localId + subsequentSubString;\r",
+											"      return path\r",
+											"    } else {\r",
+											"      return path\r",
+											"    }\r",
+											"}\r",
+											"\r",
+											"function FillMountNameIntoPath(path, mountName) {\r",
+											"  let subStringToBeReplaced = \"{mountName}\";\r",
+											"  let indexOfStartOfSubStringToBeReplaced = path.lastIndexOf(subStringToBeReplaced);\r",
+											"  let precedingSubString = path.slice(0, indexOfStartOfSubStringToBeReplaced);\r",
+											"  let indexOfEndOfSubStringToBeReplaced = indexOfStartOfSubStringToBeReplaced + subStringToBeReplaced.length;\r",
+											"  let subsequentSubString = path.slice(indexOfEndOfSubStringToBeReplaced);\r",
+											"  path = precedingSubString + mountName + subsequentSubString;\r",
+											"  return path\r",
+											"}\r",
+											"\r",
+											"function ExtractServerInformation(serverList, searchedServerName) {\r",
+											"    try {\r",
+											"        for(let i=0; i<serverList.length; i++) {\r",
+											"            if(serverList[i].serverName==searchedServerName) {\r",
+											"                return serverList[i]\r",
+											"            }\r",
+											"        }\r",
+											"    } catch (error) {\r",
+											"        logger.error(\"! serverList not found or faulty\");\r",
+											"        return {}\r",
+											"    }\r",
+											"    logger.warn(\"Server could not be found in serverList.\");\r",
+											"    return {}\r",
+											"}\r",
+											"\r",
+											"function ExtractCollectionInput(collectionInputList, searchedCollection) {\r",
+											"    try {\r",
+											"        for(let i=0; i<collectionInputList.length; i++) {\r",
+											"            if(collectionInputList[i].collectionName==searchedCollection) {\r",
+											"                return collectionInputList[i]\r",
+											"            }\r",
+											"        }\r",
+											"    } catch (error) {\r",
+											"        logger.error(\"! collectionInputList not found or faulty\");\r",
+											"        return {}\r",
+											"    }\r",
+											"    logger.warn(\"Collection could not be found in collectionInputList.\");\r",
+											"    return {}\r",
+											"}\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{{requestBody}}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{uri}}",
+									"host": [
+										"{{uri}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "restart",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"/****************************************************************************************\r",
+											"* Loading Input Data\r",
+											"****************************************************************************************/\r",
+											"var uri;\r",
+											"var dummyUri;\r",
+											"var collectionInfo;\r",
+											"try {\r",
+											"    uri = pm.variables.get(\"uri\");\r",
+											"\r",
+											"    let serverList;\r",
+											"    serverList = pm.environment.get(\"serverList\");\r",
+											"    let dummyServerInfo;\r",
+											"    dummyServerInfo = ExtractServerInformation(serverList, \"dummy\");\r",
+											"    dummyUri = dummyServerInfo.dummyUri;\r",
+											"\r",
+											"    let collectionInputList;\r",
+											"    collectionInputList = pm.environment.get(\"collectionInputList\");\r",
+											"    collectionInfo = ExtractCollectionInput(collectionInputList, \"EquipmentAugmentRpc\");\r",
+											"\r",
+											"} catch (error) {\r",
+											"    logger.error(\"! Input data could not be loaded.\")\r",
+											"}\r",
+											"\r",
+											"\r",
+											"/****************************************************************************************\r",
+											"* Extracting Result\r",
+											"****************************************************************************************/\r",
+											"var responseCode;\r",
+											"try {\r",
+											"    if ( uri != dummyUri ) {\r",
+											"        let response;\r",
+											"        response = pm.response;\r",
+											"\r",
+											"        responseCode = parseInt(response.code);\r",
+											"\r",
+											"        logger.log(\"Analysis:\");\r",
+											"\r",
+											"    }\r",
+											"\r",
+											"} catch (error) {\r",
+											"    logger.error(\"! result could not be extracted.\")\r",
+											"}\r",
+											"\r",
+											"\r",
+											"/****************************************************************************************\r",
+											"* Processing\r",
+											"****************************************************************************************/\r",
+											"try {\r",
+											"    if (uri!=dummyUri) {\r",
+											"        pm.test(\"RPC Restart answered 204\", function () {\r",
+											"            pm.expect(responseCode).to.equal(204)\r",
+											"        });\r",
+											"        if ( responseCode == 204 ) {\r",
+											"            logger.log(\"  - ok: RPC Restart answered 204\")\r",
+											"        } else {\r",
+											"            logger.log(\"  - FAIL: RPC Restart answered \" + responseCode + \" instead or 204\")\r",
+											"        }\r",
+											"\r",
+											"    }\r",
+											"\r",
+											"} catch (error) {\r",
+											"    logger.error(\"! validation could not be completely executed.\")\r",
+											"}\r",
+											"\r",
+											"\r",
+											"/****************************************************************************************\r",
+											"* Setting Collection Variables\r",
+											"****************************************************************************************/\r",
+											"\r",
+											"\r",
+											"/****************************************************************************************\r",
+											"* Functions\r",
+											"****************************************************************************************/\r",
+											"function ExtractServerInformation(serverList, searchedServerName) {\r",
+											"    try {\r",
+											"        for(let i=0; i<serverList.length; i++) {\r",
+											"            if(serverList[i].serverName==searchedServerName) {\r",
+											"                return serverList[i]\r",
+											"            }\r",
+											"        }\r",
+											"    } catch (error) {\r",
+											"        logger.error(\"! serverList not found or faulty\");\r",
+											"        return {}\r",
+											"    }\r",
+											"    logger.warn(\"Server could not be found in serverList.\");\r",
+											"    return {}\r",
+											"}\r",
+											"\r",
+											"function ExtractCollectionInput(collectionInputList, searchedCollection) {\r",
+											"    try {\r",
+											"        for(let i=0; i<collectionInputList.length; i++) {\r",
+											"            if(collectionInputList[i].collectionName==searchedCollection) {\r",
+											"                return collectionInputList[i]\r",
+											"            }\r",
+											"        }\r",
+											"    } catch (error) {\r",
+											"        logger.error(\"! collectionInputList not found or faulty\");\r",
+											"        return {}\r",
+											"    }\r",
+											"    logger.warn(\"Collection could not be found in collectionInputList.\");\r",
+											"    return {}\r",
+											"}\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"logger.struc(\"\\n===== Restart =============================================================================\");\r",
+											"\r",
+											"\r",
+											"/****************************************************************************************\r",
+											"* Loading Input Data\r",
+											"****************************************************************************************/\r",
+											"var collectionInfo = {};\r",
+											"var serverInfo = {};\r",
+											"var dummyServerInfo = {};\r",
+											"var topLevelEquipment;\r",
+											"try {\r",
+											"    let collectionInputList;\r",
+											"    collectionInputList = pm.environment.get(\"collectionInputList\");\r",
+											"    collectionInfo = ExtractCollectionInput(collectionInputList, \"EquipmentAugmentRpc\");\r",
+											"\r",
+											"    let serverToBeApplied;\r",
+											"    serverToBeApplied = collectionInfo.serverToBeApplied;\r",
+											"    let serverList;\r",
+											"    serverList = pm.environment.get(\"serverList\");\r",
+											"    serverInfo = ExtractServerInformation(serverList, serverToBeApplied);\r",
+											"    dummyServerInfo = ExtractServerInformation(serverList, \"dummy\");\r",
+											"\r",
+											"    topLevelEquipment = pm.collectionVariables.get(\"topLevelEquipment\")\r",
+											"\r",
+											"} catch (error) {\r",
+											"    logger.error(\"! Input data could not be loaded.\")\r",
+											"}\r",
+											"\r",
+											"\r",
+											"/****************************************************************************************\r",
+											"* Processing\r",
+											"****************************************************************************************/\r",
+											"\r",
+											"\r",
+											"/****************************************************************************************\r",
+											"* Setting Local Variables and Preparing the Request\r",
+											"****************************************************************************************/\r",
+											"try {\r",
+											"    let remoteProcedure;\r",
+											"    remoteProcedure = \"/restart\";\r",
+											"\r",
+											"    let pathToControlConstruct;\r",
+											"    pathToControlConstruct = serverInfo.pathToControlConstruct;\r",
+											"    let mountName;\r",
+											"    mountName = collectionInfo.mountName;\r",
+											"    pathToControlConstruct = FillMountNameIntoPath(pathToControlConstruct, mountName);\r",
+											"\r",
+											"    let server;\r",
+											"    server = serverInfo.server;\r",
+											"\r",
+											"    let uri;\r",
+											"    if ( (mountName!=\"\") && (topLevelEquipment!=\"\") ) {\r",
+											"        uri = server + pathToControlConstruct + remoteProcedure\r",
+											"    } else {\r",
+											"        logger.warn(\"Input data incomplete.\");\r",
+											"        uri = dummyServerInfo.dummyUri\r",
+											"    }\r",
+											"\r",
+											"    let requestBody;\r",
+											"    let kindOfRestart = \"\";\r",
+											"    kindOfRestart = collectionInfo.kindOfRestart;\r",
+											"    let affectedComponentPath = \"\";\r",
+											"    affectedComponentPath = \"/core-model-1-4:control-construct/equipment[uuid='\" + topLevelEquipment + \"']\";\r",
+											"    requestBody = '{'\r",
+											"        + '\"kind-of-restart\": \"' + kindOfRestart + '\", '\r",
+											"        + '\"affected-component-path\": \"' + affectedComponentPath + '\"'\r",
+											"        + '}';\r",
+											"\r",
+											"    pm.variables.clear();\r",
+											"\r",
+											"    pm.variables.set(\"uri\", uri);\r",
+											"    pm.variables.set(\"requestBody\", requestBody);\r",
+											"    \r",
+											"    pm.request.headers.upsert({ key: \"Authorization\", value: serverInfo.authorizationCode });\r",
+											"    pm.request.headers.upsert({ key: \"operation-key\", value: serverInfo.operationKey });\r",
+											"    pm.request.headers.upsert({ key: \"user\", value: serverInfo.userName });\r",
+											"    pm.request.headers.upsert({ key: \"originator\", value: serverInfo.originator });\r",
+											"    pm.request.headers.upsert({ key: \"x-correlator\", value: serverInfo.xCorrelator });\r",
+											"    pm.request.headers.upsert({ key: \"trace-indicator\", value: serverInfo.traceIndicator });\r",
+											"    pm.request.headers.upsert({ key: \"customer-journey\", value: serverInfo.customerJourney });\r",
+											"\r",
+											"    pm.request.headers.upsert({ key: \"Accept\", value: \"application/json\" });\r",
+											"    pm.request.headers.upsert({ key: \"Content-Type\", value: \"application/json\" })\r",
+											"\r",
+											"} catch (error) {\r",
+											"    logger.error(\"! Local variables could not be set.\")\r",
+											"}\r",
+											"\r",
+											"\r",
+											"/****************************************************************************************\r",
+											"* Functions\r",
+											"****************************************************************************************/\r",
+											"function FillUuidIntoPath(path, uuid) {\r",
+											"    if ( (uuid!=undefined) && (uuid!=null) && (uuid!=\"\") ) {\r",
+											"      let subStringToBeReplaced = \"{uuid}\";\r",
+											"      let indexOfStartOfSubStringToBeReplaced = path.lastIndexOf(subStringToBeReplaced);\r",
+											"      let precedingSubString = path.slice(0, indexOfStartOfSubStringToBeReplaced);\r",
+											"      let indexOfEndOfSubStringToBeReplaced = indexOfStartOfSubStringToBeReplaced + subStringToBeReplaced.length;\r",
+											"      let subsequentSubString = path.slice(indexOfEndOfSubStringToBeReplaced);\r",
+											"      path = precedingSubString + uuid + subsequentSubString;\r",
+											"      return path\r",
+											"    } else {\r",
+											"      return path\r",
+											"    }\r",
+											"}\r",
+											"\r",
+											"function FillLocalIdIntoPath(path, localId) {\r",
+											"    if ( (localId!=undefined) && (localId!=null) && (localId!=\"\") ) {\r",
+											"      let subStringToBeReplaced = \"{localId}\";\r",
+											"      let indexOfStartOfSubStringToBeReplaced = path.lastIndexOf(subStringToBeReplaced);\r",
+											"      let precedingSubString = path.slice(0, indexOfStartOfSubStringToBeReplaced);\r",
+											"      let indexOfEndOfSubStringToBeReplaced = indexOfStartOfSubStringToBeReplaced + subStringToBeReplaced.length;\r",
+											"      let subsequentSubString = path.slice(indexOfEndOfSubStringToBeReplaced);\r",
+											"      path = precedingSubString + localId + subsequentSubString;\r",
+											"      return path\r",
+											"    } else {\r",
+											"      return path\r",
+											"    }\r",
+											"}\r",
+											"\r",
+											"function FillMountNameIntoPath(path, mountName) {\r",
+											"  let subStringToBeReplaced = \"{mountName}\";\r",
+											"  let indexOfStartOfSubStringToBeReplaced = path.lastIndexOf(subStringToBeReplaced);\r",
+											"  let precedingSubString = path.slice(0, indexOfStartOfSubStringToBeReplaced);\r",
+											"  let indexOfEndOfSubStringToBeReplaced = indexOfStartOfSubStringToBeReplaced + subStringToBeReplaced.length;\r",
+											"  let subsequentSubString = path.slice(indexOfEndOfSubStringToBeReplaced);\r",
+											"  path = precedingSubString + mountName + subsequentSubString;\r",
+											"  return path\r",
+											"}\r",
+											"\r",
+											"function ExtractServerInformation(serverList, searchedServerName) {\r",
+											"    try {\r",
+											"        for(let i=0; i<serverList.length; i++) {\r",
+											"            if(serverList[i].serverName==searchedServerName) {\r",
+											"                return serverList[i]\r",
+											"            }\r",
+											"        }\r",
+											"    } catch (error) {\r",
+											"        logger.error(\"! serverList not found or faulty\");\r",
+											"        return {}\r",
+											"    }\r",
+											"    logger.warn(\"Server could not be found in serverList.\");\r",
+											"    return {}\r",
+											"}\r",
+											"\r",
+											"function ExtractCollectionInput(collectionInputList, searchedCollection) {\r",
+											"    try {\r",
+											"        for(let i=0; i<collectionInputList.length; i++) {\r",
+											"            if(collectionInputList[i].collectionName==searchedCollection) {\r",
+											"                return collectionInputList[i]\r",
+											"            }\r",
+											"        }\r",
+											"    } catch (error) {\r",
+											"        logger.error(\"! collectionInputList not found or faulty\");\r",
+											"        return {}\r",
+											"    }\r",
+											"    logger.warn(\"Collection could not be found in collectionInputList.\");\r",
+											"    return {}\r",
+											"}\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{{requestBody}}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{uri}}",
+									"host": [
+										"{{uri}}"
+									]
+								}
 							},
 							"response": []
 						}

@@ -44,7 +44,7 @@
                 type: string
               last-config-change-timestamp:
                 type: string
-                attern: '^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|[\\+\\-]\\d{2}:\\d{2})$'
+                pattern: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[\+\-]\d{2}:\d{2})$'
               device-model-name:
                 type: string
 
@@ -772,3 +772,16 @@
           address:
             type: array
 
+/restart:
+  type: object
+  required:
+    - kind-of-restart
+    - affected-component-path
+  properties:
+    kind-of-restart:
+      type: string
+      enum:
+        - 'equipment-augment-1-0:RESTART_TYPE_COLD'
+        - 'equipment-augment-1-0:RESTART_TYPE_WARM'
+    affected-component-path:
+      type: string

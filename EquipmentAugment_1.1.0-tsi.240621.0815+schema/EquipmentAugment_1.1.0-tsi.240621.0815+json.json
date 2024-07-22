@@ -1,1132 +1,1151 @@
 {
-  "?fields=top-level-equipment": {
-      "type": "object",
-      "required": [
-          "core-model-1-4:control-construct"
-      ],
-      "properties": {
-          "core-model-1-4:control-construct": {
-              "type": "array",
-              "minItems": 1,
-              "maxItems": 1,
-              "items": {
-                  "type": "object",
-                  "required": [
-                      "top-level-equipment"
-                  ],
-                  "properties": {
-                      "top-level-equipment": {
-                          "type": "array",
-                          "minItems": 1,
-                          "maxItems": 1,
-                          "items": {
-                              "type": "string"
-                          }
-                      }
-                  }
-              }
-          }
-      }
-  },
-  "?fields=equipment-augment-1-0%3Acontrol-construct-pac": {
-      "type": "object",
-      "required": [
-          "core-model-1-4:control-construct"
-      ],
-      "properties": {
-          "core-model-1-4:control-construct": {
-              "type": "array",
-              "minItems": 1,
-              "maxItems": 1,
-              "items": {
-                  "type": "object",
-                  "required": [
-                      "equipment-augment-1-0:control-construct-pac"
-                  ],
-                  "properties": {
-                      "equipment-augment-1-0:control-construct-pac": {
-                          "type": "object",
-                          "required": [
-                              "external-label",
-                              "last-config-change-timestamp",
-                              "device-model-name"
-                          ],
-                          "properties": {
-                              "external-label": {
-                                  "type": "string"
-                              },
-                              "last-config-change-timestamp": {
-                                  "type": "string",
-                                  "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|[\\+\\-]\\d{2}:\\d{2})$"
-                              },
-                              "device-model-name": {
-                                  "type": "string"
-                              }
-                          }
-                      }
-                  }
-              }
-          }
-      }
-  },
-  "/equipment={uuid}": {
-      "type": "object",
-      "required": [
-          "core-model-1-4:equipment"
-      ],
-      "properties": {
-          "core-model-1-4:equipment": {
-              "type": "array",
-              "items": {
-                  "type": "object",
-                  "required": [
-                      "uuid",
-                      "operational-state"
-                  ],
-                  "properties": {
-                      "connector": {
-                          "type": "array",
-                          "minItems": 0,
-                          "x-key": "local-id",
-                          "items": {
-                              "type": "object"
-                          }
-                      },
-                      "contained-holder": {
-                          "type": "array",
-                          "minItems": 0,
-                          "x-key": "local-id",
-                          "items": {
-                              "type": "object"
-                          }
-                      },
-                      "is-field-replaceable": {
-                          "type": "boolean"
-                      },
-                      "function-block": {
-                          "type": "array",
-                          "minItems": 0,
-                          "items": {
-                              "type": "string"
-                          }
-                      },
-                      "expected-equipment": {
-                          "type": "array",
-                          "minItems": 0,
-                          "x-key": "local-id",
-                          "items": {
-                              "type": "object"
-                          }
-                      },
-                      "actual-equipment": {
-                          "type": "object"
-                      },
-                      "equipment-functional-boundary": {
-                          "type": "string"
-                      },
-                      "external-managed-id": {
-                          "type": "object",
-                          "properties": {
-                              "manager-identifier": {
-                                  "type": "string"
-                              },
-                              "external-managed-uuid": {
-                                  "type": "string"
-                              }
-                          }
-                      },
-                      "local-id": {
-                          "type": "string"
-                      },
-                      "uuid": {
-                          "type": "string"
-                      },
-                      "name": {
-                          "type": "array"
-                      },
-                      "label": {
-                          "type": "array"
-                      },
-                      "extension": {
-                          "type": "array"
-                      },
-                      "operational-state": {
-                          "type": "string",
-                          "enum": [
-                              "core-model-1-4:OPERATIONAL_STATE_DISABLED",
-                              "core-model-1-4:OPERATIONAL_STATE_ENABLED"
-                          ]
-                      },
-                      "administrative-control": {
-                          "type": "string"
-                      },
-                      "administrative-state": {
-                          "type": "string"
-                      },
-                      "lifecycle-state": {
-                          "type": "string"
-                      },
-                      "address": {
-                          "type": "array"
-                      }
-                  }
-              }
-          }
-      }
-  },
-  "/equipment={uuid}/connector={localId}": {
-      "type": "object",
-      "required": [
-          "core-model-1-4:connector"
-      ],
-      "properties": {
-          "core-model-1-4:connector": {
-              "type": "array",
-              "items": {
-                  "type": "object",
-                  "required": [
-                      "local-id",
-                      "equipment-augment-1-0:connector-pac"
-                  ],
-                  "properties": {
-                      "connector": {
-                          "type": "string"
-                      },
-                      "orientation": {
-                          "type": "string"
-                      },
-                      "pin-layout": {
-                          "type": "string"
-                      },
-                      "connector-type": {
-                          "type": "string"
-                      },
-                      "role": {
-                          "type": "string"
-                      },
-                      "local-id": {
-                          "type": "string"
-                      },
-                      "name": {
-                          "type": "array"
-                      },
-                      "label": {
-                          "type": "array"
-                      },
-                      "extension": {
-                          "type": "array"
-                      },
-                      "operational-state": {
-                          "type": "string"
-                      },
-                      "administrative-control": {
-                          "type": "string"
-                      },
-                      "administrative-state": {
-                          "type": "string"
-                      },
-                      "lifecycle-state": {
-                          "type": "string"
-                      },
-                      "address": {
-                          "type": "array"
-                      },
-                      "equipment-augment-1-0:connector-pac": {
-                          "type": "object",
-                          "required": [
-                              "connector-kind",
-                              "outside-label",
-                              "sequence-id"
-                          ],
-                          "properties": {
-                              "connector-kind": {
-                                  "type": "string",
-                                  "enum": [
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_SC",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_FIBRE_CHANNEL_STYLE_1",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_FIBRE_CHANNEL_STYLE_2",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_BNC",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_FC",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_FIBER_JACK",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_LC",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_MT_RJ",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_MU",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_SG",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_OPTICAL_PIGTAIL",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_MPO1x12",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_MPO2x16",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_HSSDC_II",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_COPPER_PIGTAIL",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_RJ45",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_NO_SEPERABLE_CONNECTOR",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_MXC2x16",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_ST",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_SMA",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_N",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_DIN_1.0_2.3",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_SCSI_50_PIN_1.27MM_PITCH",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_SCSI_FEMALE_68_PIN",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_D_SUB_FEMALE_15_PIN",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_RS-422",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_RS-232",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_RS-485",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_MDR68",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_TNC",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_FLANGE",
-                                      "equipment-augment-1-0:CONNECTOR_KIND_TYPE_NOT_YET_DEFINED"
-                                  ]
-                              },
-                              "outside-label": {
-                                  "type": "string"
-                              },
-                              "sequence-id": {
-                                  "type": "integer",
-                                  "format": "int16"
-                              }
-                          }
-                      }
-                  }
-              }
-          }
-      }
-  },
-  "/equipment={uuid}/contained-holder={localId/equipment={uuid}": {
-      "type": "object",
-      "required": [
-          "core-model-1-4:contained-holder"
-      ],
-      "properties": {
-          "core-model-1-4:contained-holder": {
-              "type": "array",
-              "items": {
-                  "type": "object",
-                  "required": [
-                      "occupying-fru",
-                      "local-id",
-                      "equipment-augment-1-0:holder-pac"
-                  ],
-                  "properties": {
-                      "occupying-fru": {
-                          "type": "string",
-                          "minLength": 1
-                      },
-                      "holder-location": {
-                          "type": "string"
-                      },
-                      "expected-holder": {
-                          "type": "object",
-                          "properties": {
-                              "spatial-properties-of-type": {
-                                  "type": "object",
-                                  "properties": {
-                                      "height": {
-                                          "type": "string"
-                                      },
-                                      "width": {
-                                          "type": "string"
-                                      },
-                                      "length": {
-                                          "type": "string"
-                                      }
-                                  }
-                              },
-                              "environmental-rating": {
-                                  "type": "object",
-                                  "properties": {
-                                      "thermal-rating": {
-                                          "type": "object",
-                                          "properties": {
-                                              "thermal-rating-name": {
-                                                  "type": "string"
-                                              },
-                                              "maximum-temperature": {
-                                                  "type": "string"
-                                              },
-                                              "minimum-temperature": {
-                                                  "type": "string"
-                                              }
-                                          }
-                                      },
-                                      "power-rating": {
-                                          "type": "object",
-                                          "properties": {
-                                              "power-rating-name": {
-                                                  "type": "string"
-                                              },
-                                              "power-rating-value": {
-                                                  "type": "string"
-                                              }
-                                          }
-                                      },
-                                      "humidity-rating": {
-                                          "type": "string"
-                                      }
-                                  }
-                              },
-                              "position": {
-                                  "type": "object",
-                                  "properties": {
-                                      "relative-position": {
-                                          "type": "string"
-                                      }
-                                  }
-                              },
-                              "holder-structure": {
-                                  "type": "object",
-                                  "properties": {
-                                      "holder-category": {
-                                          "type": "string"
-                                      },
-                                      "is-captive": {
-                                          "type": "boolean"
-                                      },
-                                      "is-guided": {
-                                          "type": "boolean"
-                                      },
-                                      "is-quantised-space": {
-                                          "type": "boolean"
-                                      }
-                                  }
-                              },
-                              "local-id": {
-                                  "type": "string"
-                              },
-                              "name": {
-                                  "type": "array"
-                              },
-                              "label": {
-                                  "type": "array"
-                              },
-                              "extension": {
-                                  "type": "array"
-                              },
-                              "operational-state": {
-                                  "type": "string"
-                              },
-                              "administrative-control": {
-                                  "type": "string"
-                              },
-                              "administrative-state": {
-                                  "type": "string"
-                              },
-                              "lifecycle-state": {
-                                  "type": "string"
-                              },
-                              "address": {
-                                  "type": "array"
-                              }
-                          }
-                      },
-                      "actual-holder": {
-                          "type": "object",
-                          "properties": {
-                              "spatial-properties-of-type": {
-                                  "type": "object",
-                                  "properties": {
-                                      "height": {
-                                          "type": "string"
-                                      },
-                                      "width": {
-                                          "type": "string"
-                                      },
-                                      "length": {
-                                          "type": "string"
-                                      }
-                                  }
-                              },
-                              "environmental-rating": {
-                                  "type": "object",
-                                  "properties": {
-                                      "thermal-rating": {
-                                          "type": "object",
-                                          "properties": {
-                                              "thermal-rating-name": {
-                                                  "type": "string"
-                                              },
-                                              "maximum-temperature": {
-                                                  "type": "string"
-                                              },
-                                              "minimum-temperature": {
-                                                  "type": "string"
-                                              }
-                                          }
-                                      },
-                                      "power-rating": {
-                                          "type": "object",
-                                          "properties": {
-                                              "power-rating-name": {
-                                                  "type": "string"
-                                              },
-                                              "power-rating-value": {
-                                                  "type": "string"
-                                              }
-                                          }
-                                      },
-                                      "humidity-rating": {
-                                          "type": "string"
-                                      }
-                                  }
-                              },
-                              "position": {
-                                  "type": "object",
-                                  "properties": {
-                                      "relative-position": {
-                                          "type": "string"
-                                      }
-                                  }
-                              },
-                              "holder-structure": {
-                                  "type": "object",
-                                  "properties": {
-                                      "holder-category": {
-                                          "type": "string"
-                                      },
-                                      "is-captive": {
-                                          "type": "boolean"
-                                      },
-                                      "is-guided": {
-                                          "type": "boolean"
-                                      },
-                                      "is-quantised-space": {
-                                          "type": "boolean"
-                                      }
-                                  }
-                              },
-                              "local-id": {
-                                  "type": "string"
-                              },
-                              "name": {
-                                  "type": "array"
-                              },
-                              "label": {
-                                  "type": "array"
-                              },
-                              "extension": {
-                                  "type": "array"
-                              },
-                              "operational-state": {
-                                  "type": "string"
-                              },
-                              "administrative-control": {
-                                  "type": "string"
-                              },
-                              "administrative-state": {
-                                  "type": "string"
-                              },
-                              "lifecycle-state": {
-                                  "type": "string"
-                              },
-                              "address": {
-                                  "type": "array"
-                              }
-                          }
-                      },
-                      "local-id": {
-                          "type": "string"
-                      },
-                      "name": {
-                          "type": "array"
-                      },
-                      "label": {
-                          "type": "array"
-                      },
-                      "extension": {
-                          "type": "array"
-                      },
-                      "operational-state": {
-                          "type": "string"
-                      },
-                      "administrative-control": {
-                          "type": "string"
-                      },
-                      "administrative-state": {
-                          "type": "string"
-                      },
-                      "lifecycle-state": {
-                          "type": "string"
-                      },
-                      "address": {
-                          "type": "array"
-                      },
-                      "equipment-augment-1-0:holder-pac": {
-                          "type": "object",
-                          "required": [
-                              "vendor-label",
-                              "outside-label",
-                              "sequence-id"
-                          ],
-                          "properties": {
-                              "vendor-label": {
-                                  "type": "string"
-                              },
-                              "outside-label": {
-                                  "type": "string"
-                              },
-                              "sequence-id": {
-                                  "type": "integer",
-                                  "format": "int16"
-                              }
-                          }
-                      }
-                  }
-              }
-          }
-      }
-  },
-  "/equipment={uuid}/actual-equipment": {
-    "type": "object",
-    "required": [
-        "core-model-1-4:actual-equipment"
-    ],
-    "properties": {
-        "core-model-1-4:actual-equipment": {
-            "type": "object",
-            "required": [
-                "structure",
-                "physical-properties",
-                "manufactured-thing",
-                "operational-state"
-            ],
-            "properties": {
-                "location": {
-                    "type": "object",
-                    "properties": {
-                        "equipment-location": {
-                            "type": "string"
-                        },
-                        "geographical-location": {
-                            "type": "string"
-                        }
-                    }
-                },
-                "structure": {
+    "?fields=top-level-equipment": {
+        "type": "object",
+        "required": [
+            "core-model-1-4:control-construct"
+        ],
+        "properties": {
+            "core-model-1-4:control-construct": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 1,
+                "items": {
                     "type": "object",
                     "required": [
-                        "category"
+                        "top-level-equipment"
                     ],
                     "properties": {
-                        "category": {
+                        "top-level-equipment": {
+                            "type": "array",
+                            "minItems": 1,
+                            "maxItems": 1,
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "?fields=equipment-augment-1-0%3Acontrol-construct-pac": {
+        "type": "object",
+        "required": [
+            "core-model-1-4:control-construct"
+        ],
+        "properties": {
+            "core-model-1-4:control-construct": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 1,
+                "items": {
+                    "type": "object",
+                    "required": [
+                        "equipment-augment-1-0:control-construct-pac"
+                    ],
+                    "properties": {
+                        "equipment-augment-1-0:control-construct-pac": {
+                            "type": "object",
+                            "required": [
+                                "external-label",
+                                "last-config-change-timestamp",
+                                "device-model-name"
+                            ],
+                            "properties": {
+                                "external-label": {
+                                    "type": "string"
+                                },
+                                "last-config-change-timestamp": {
+                                    "type": "string",
+                                    "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|[\\+\\-]\\d{2}:\\d{2})$"
+                                },
+                                "device-model-name": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "/equipment={uuid}": {
+        "type": "object",
+        "required": [
+            "core-model-1-4:equipment"
+        ],
+        "properties": {
+            "core-model-1-4:equipment": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "required": [
+                        "uuid",
+                        "operational-state"
+                    ],
+                    "properties": {
+                        "connector": {
+                            "type": "array",
+                            "minItems": 0,
+                            "x-key": "local-id",
+                            "items": {
+                                "type": "object"
+                            }
+                        },
+                        "contained-holder": {
+                            "type": "array",
+                            "minItems": 0,
+                            "x-key": "local-id",
+                            "items": {
+                                "type": "object"
+                            }
+                        },
+                        "is-field-replaceable": {
+                            "type": "boolean"
+                        },
+                        "function-block": {
+                            "type": "array",
+                            "minItems": 0,
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "expected-equipment": {
+                            "type": "array",
+                            "minItems": 0,
+                            "x-key": "local-id",
+                            "items": {
+                                "type": "object"
+                            }
+                        },
+                        "actual-equipment": {
+                            "type": "object"
+                        },
+                        "equipment-functional-boundary": {
+                            "type": "string"
+                        },
+                        "external-managed-id": {
+                            "type": "object",
+                            "properties": {
+                                "manager-identifier": {
+                                    "type": "string"
+                                },
+                                "external-managed-uuid": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "local-id": {
+                            "type": "string"
+                        },
+                        "uuid": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "array"
+                        },
+                        "label": {
+                            "type": "array"
+                        },
+                        "extension": {
+                            "type": "array"
+                        },
+                        "operational-state": {
                             "type": "string",
                             "enum": [
-                                "core-model-1-4:EQUIPMENT_CATEGORY_SUBRACK",
-                                "core-model-1-4:EQUIPMENT_CATEGORY_CIRCUIT_PACK",
-                                "core-model-1-4:EQUIPMENT_CATEGORY_SMALL_FORMFACTOR_PLUGGABLE",
-                                "core-model-1-4:EQUIPMENT_CATEGORY_STAND_ALONE_UNIT",
-                                "core-model-1-4:EQUIPMENT_CATEGORY_RACK",
-                                "equipment-augment-1-0:EQUIPMENT_CATEGORY_BACKPLANE",
-                                "equipment-augment-1-0:EQUIPMENT_CATEGORY_POWER_UNIT",
-                                "equipment-augment-1-0:EQUIPMENT_CATEGORY_BATTERY",
-                                "equipment-augment-1-0:EQUIPMENT_CATEGORY_FAN",
-                                "equipment-augment-1-0:EQUIPMENT_CATEGORY_CENTRAL_PROCESSING_UNIT",
-                                "equipment-augment-1-0:EQUIPMENT_CATEGORY_STORAGE_DRIVE",
-                                "equipment-augment-1-0:EQUIPMENT_CATEGORY_SENSOR",
-                                "equipment-augment-1-0:EQUIPMENT_CATEGORY_MODEM",
-                                "equipment-augment-1-0:EQUIPMENT_CATEGORY_PORT_EXPANSION_BOARD",
-                                "equipment-augment-1-0:EQUIPMENT_CATEGORY_OUTDOOR_UNIT",
-                                "equipment-augment-1-0:EQUIPMENT_CATEGORY_FULL_OUTDOOR_UNIT",
-                                "equipment-augment-1-0:EQUIPMENT_CATEGORY_NOT_YET_DEFINED"
+                                "core-model-1-4:OPERATIONAL_STATE_DISABLED",
+                                "core-model-1-4:OPERATIONAL_STATE_ENABLED"
                             ]
+                        },
+                        "administrative-control": {
+                            "type": "string"
+                        },
+                        "administrative-state": {
+                            "type": "string"
+                        },
+                        "lifecycle-state": {
+                            "type": "string"
+                        },
+                        "address": {
+                            "type": "array"
                         }
                     }
-                },
-                "swappability": {
-                    "type": "object",
-                    "properties": {
-                        "is-hot-swappable": {
-                            "type": "boolean"
-                        }
-                    }
-                },
-                "physical-properties": {
+                }
+            }
+        }
+    },
+    "/equipment={uuid}/connector={localId}": {
+        "type": "object",
+        "required": [
+            "core-model-1-4:connector"
+        ],
+        "properties": {
+            "core-model-1-4:connector": {
+                "type": "array",
+                "items": {
                     "type": "object",
                     "required": [
-                        "temperature"
+                        "local-id",
+                        "equipment-augment-1-0:connector-pac"
                     ],
                     "properties": {
-                        "temperature": {
-                            "type": "string"
-                        }
-                    }
-                },
-                "function-enablers": {
-                    "type": "object",
-                    "properties": {
-                        "power-state": {
-                            "type": "string"
-                        }
-                    }
-                },
-                "mechanical-functions": {
-                    "type": "object",
-                    "properties": {
-                        "rotation-speed": {
-                            "type": "string"
-                        }
-                    }
-                },
-                "physical-characteristics": {
-                    "type": "object",
-                    "properties": {
-                        "weight-characeristics": {
+                        "connector": {
                             "type": "string"
                         },
-                        "fire-characteristics": {
+                        "orientation": {
                             "type": "string"
                         },
-                        "materials": {
-                            "type": "string"
-                        }
-                    }
-                },
-                "mechanical-features": {
-                    "type": "object"
-                },
-                "spatial-properties-of-type": {
-                    "type": "object",
-                    "properties": {
-                        "height": {
+                        "pin-layout": {
                             "type": "string"
                         },
-                        "width": {
+                        "connector-type": {
                             "type": "string"
                         },
-                        "length": {
+                        "role": {
                             "type": "string"
-                        }
-                    }
-                },
-                "environmental-rating": {
-                    "type": "object",
-                    "properties": {
-                        "thermal-rating": {
+                        },
+                        "local-id": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "array"
+                        },
+                        "label": {
+                            "type": "array"
+                        },
+                        "extension": {
+                            "type": "array"
+                        },
+                        "operational-state": {
+                            "type": "string"
+                        },
+                        "administrative-control": {
+                            "type": "string"
+                        },
+                        "administrative-state": {
+                            "type": "string"
+                        },
+                        "lifecycle-state": {
+                            "type": "string"
+                        },
+                        "address": {
+                            "type": "array"
+                        },
+                        "equipment-augment-1-0:connector-pac": {
                             "type": "object",
+                            "required": [
+                                "connector-kind",
+                                "outside-label",
+                                "sequence-id"
+                            ],
                             "properties": {
-                                "thermal-rating-name": {
+                                "connector-kind": {
+                                    "type": "string",
+                                    "enum": [
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_SC",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_FIBRE_CHANNEL_STYLE_1",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_FIBRE_CHANNEL_STYLE_2",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_BNC",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_FC",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_FIBER_JACK",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_LC",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_MT_RJ",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_MU",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_SG",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_OPTICAL_PIGTAIL",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_MPO1x12",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_MPO2x16",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_HSSDC_II",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_COPPER_PIGTAIL",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_RJ45",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_NO_SEPERABLE_CONNECTOR",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_MXC2x16",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_ST",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_SMA",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_N",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_DIN_1.0_2.3",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_SCSI_50_PIN_1.27MM_PITCH",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_SCSI_FEMALE_68_PIN",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_D_SUB_FEMALE_15_PIN",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_RS-422",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_RS-232",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_RS-485",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_MDR68",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_TNC",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_FLANGE",
+                                        "equipment-augment-1-0:CONNECTOR_KIND_TYPE_NOT_YET_DEFINED"
+                                    ]
+                                },
+                                "outside-label": {
                                     "type": "string"
                                 },
-                                "maximum-temperature": {
-                                    "type": "string"
-                                },
-                                "minimum-temperature": {
-                                    "type": "string"
+                                "sequence-id": {
+                                    "type": "integer",
+                                    "format": "int16"
                                 }
                             }
-                        },
-                        "power-rating": {
-                            "type": "object",
-                            "properties": {
-                                "power-rating-name": {
-                                    "type": "string"
-                                },
-                                "power-rating-value": {
-                                    "type": "string"
-                                }
-                            }
-                        },
-                        "humidity-rating": {
-                            "type": "string"
                         }
                     }
-                },
-                "manufactured-thing": {
+                }
+            }
+        }
+    },
+    "/equipment={uuid}/contained-holder={localId/equipment={uuid}": {
+        "type": "object",
+        "required": [
+            "core-model-1-4:contained-holder"
+        ],
+        "properties": {
+            "core-model-1-4:contained-holder": {
+                "type": "array",
+                "items": {
                     "type": "object",
                     "required": [
-                        "manufacturer-properties",
-                        "equipment-type",
-                        "equipment-instance"
+                        "occupying-fru",
+                        "local-id",
+                        "equipment-augment-1-0:holder-pac"
                     ],
                     "properties": {
-                        "manufacturer-properties": {
-                            "type": "object",
-                            "required": [
-                                "manufacturer-name"
-                            ],
-                            "properties": {
-                                "manufacturer-identifier": {
-                                    "type": "string"
-                                },
-                                "manufacturer-name": {
-                                    "type": "string"
-                                }
-                            }
+                        "occupying-fru": {
+                            "type": "string",
+                            "minLength": 1
                         },
-                        "equipment-type": {
+                        "holder-location": {
+                            "type": "string"
+                        },
+                        "expected-holder": {
                             "type": "object",
-                            "required": [
-                                "part-type-identifier",
-                                "version",
-                                "equipment-augment-1-0:equipment-type-pac"
-                            ],
                             "properties": {
-                                "description": {
-                                    "type": "string"
-                                },
-                                "model-identifier": {
-                                    "type": "string"
-                                },
-                                "part-type-identifier": {
-                                    "type": "string"
-                                },
-                                "type-name": {
-                                    "type": "string"
-                                },
-                                "version": {
-                                    "type": "string"
-                                },
-                                "equipment-augment-1-0:equipment-type-pac": {
+                                "spatial-properties-of-type": {
                                     "type": "object",
-                                    "required": [
-                                        "outside-label",
-                                        "lct-label"
-                                    ],
                                     "properties": {
-                                        "outside-label": {
+                                        "height": {
                                             "type": "string"
                                         },
-                                        "lct-label": {
+                                        "width": {
+                                            "type": "string"
+                                        },
+                                        "length": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "environmental-rating": {
+                                    "type": "object",
+                                    "properties": {
+                                        "thermal-rating": {
+                                            "type": "object",
+                                            "properties": {
+                                                "thermal-rating-name": {
+                                                    "type": "string"
+                                                },
+                                                "maximum-temperature": {
+                                                    "type": "string"
+                                                },
+                                                "minimum-temperature": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "power-rating": {
+                                            "type": "object",
+                                            "properties": {
+                                                "power-rating-name": {
+                                                    "type": "string"
+                                                },
+                                                "power-rating-value": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "humidity-rating": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "position": {
+                                    "type": "object",
+                                    "properties": {
+                                        "relative-position": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "holder-structure": {
+                                    "type": "object",
+                                    "properties": {
+                                        "holder-category": {
+                                            "type": "string"
+                                        },
+                                        "is-captive": {
+                                            "type": "boolean"
+                                        },
+                                        "is-guided": {
+                                            "type": "boolean"
+                                        },
+                                        "is-quantised-space": {
+                                            "type": "boolean"
+                                        }
+                                    }
+                                },
+                                "local-id": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "array"
+                                },
+                                "label": {
+                                    "type": "array"
+                                },
+                                "extension": {
+                                    "type": "array"
+                                },
+                                "operational-state": {
+                                    "type": "string"
+                                },
+                                "administrative-control": {
+                                    "type": "string"
+                                },
+                                "administrative-state": {
+                                    "type": "string"
+                                },
+                                "lifecycle-state": {
+                                    "type": "string"
+                                },
+                                "address": {
+                                    "type": "array"
+                                }
+                            }
+                        },
+                        "actual-holder": {
+                            "type": "object",
+                            "properties": {
+                                "spatial-properties-of-type": {
+                                    "type": "object",
+                                    "properties": {
+                                        "height": {
+                                            "type": "string"
+                                        },
+                                        "width": {
+                                            "type": "string"
+                                        },
+                                        "length": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "environmental-rating": {
+                                    "type": "object",
+                                    "properties": {
+                                        "thermal-rating": {
+                                            "type": "object",
+                                            "properties": {
+                                                "thermal-rating-name": {
+                                                    "type": "string"
+                                                },
+                                                "maximum-temperature": {
+                                                    "type": "string"
+                                                },
+                                                "minimum-temperature": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "power-rating": {
+                                            "type": "object",
+                                            "properties": {
+                                                "power-rating-name": {
+                                                    "type": "string"
+                                                },
+                                                "power-rating-value": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "humidity-rating": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "position": {
+                                    "type": "object",
+                                    "properties": {
+                                        "relative-position": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "holder-structure": {
+                                    "type": "object",
+                                    "properties": {
+                                        "holder-category": {
+                                            "type": "string"
+                                        },
+                                        "is-captive": {
+                                            "type": "boolean"
+                                        },
+                                        "is-guided": {
+                                            "type": "boolean"
+                                        },
+                                        "is-quantised-space": {
+                                            "type": "boolean"
+                                        }
+                                    }
+                                },
+                                "local-id": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "array"
+                                },
+                                "label": {
+                                    "type": "array"
+                                },
+                                "extension": {
+                                    "type": "array"
+                                },
+                                "operational-state": {
+                                    "type": "string"
+                                },
+                                "administrative-control": {
+                                    "type": "string"
+                                },
+                                "administrative-state": {
+                                    "type": "string"
+                                },
+                                "lifecycle-state": {
+                                    "type": "string"
+                                },
+                                "address": {
+                                    "type": "array"
+                                }
+                            }
+                        },
+                        "local-id": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "array"
+                        },
+                        "label": {
+                            "type": "array"
+                        },
+                        "extension": {
+                            "type": "array"
+                        },
+                        "operational-state": {
+                            "type": "string"
+                        },
+                        "administrative-control": {
+                            "type": "string"
+                        },
+                        "administrative-state": {
+                            "type": "string"
+                        },
+                        "lifecycle-state": {
+                            "type": "string"
+                        },
+                        "address": {
+                            "type": "array"
+                        },
+                        "equipment-augment-1-0:holder-pac": {
+                            "type": "object",
+                            "required": [
+                                "vendor-label",
+                                "outside-label",
+                                "sequence-id"
+                            ],
+                            "properties": {
+                                "vendor-label": {
+                                    "type": "string"
+                                },
+                                "outside-label": {
+                                    "type": "string"
+                                },
+                                "sequence-id": {
+                                    "type": "integer",
+                                    "format": "int16"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "/equipment={uuid}/actual-equipment": {
+        "type": "object",
+        "required": [
+            "core-model-1-4:actual-equipment"
+        ],
+        "properties": {
+            "core-model-1-4:actual-equipment": {
+                "type": "object",
+                "required": [
+                    "structure",
+                    "physical-properties",
+                    "manufactured-thing",
+                    "operational-state"
+                ],
+                "properties": {
+                    "location": {
+                        "type": "object",
+                        "properties": {
+                            "equipment-location": {
+                                "type": "string"
+                            },
+                            "geographical-location": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "structure": {
+                        "type": "object",
+                        "required": [
+                            "category"
+                        ],
+                        "properties": {
+                            "category": {
+                                "type": "string",
+                                "enum": [
+                                    "core-model-1-4:EQUIPMENT_CATEGORY_SUBRACK",
+                                    "core-model-1-4:EQUIPMENT_CATEGORY_CIRCUIT_PACK",
+                                    "core-model-1-4:EQUIPMENT_CATEGORY_SMALL_FORMFACTOR_PLUGGABLE",
+                                    "core-model-1-4:EQUIPMENT_CATEGORY_STAND_ALONE_UNIT",
+                                    "core-model-1-4:EQUIPMENT_CATEGORY_RACK",
+                                    "equipment-augment-1-0:EQUIPMENT_CATEGORY_BACKPLANE",
+                                    "equipment-augment-1-0:EQUIPMENT_CATEGORY_POWER_UNIT",
+                                    "equipment-augment-1-0:EQUIPMENT_CATEGORY_BATTERY",
+                                    "equipment-augment-1-0:EQUIPMENT_CATEGORY_FAN",
+                                    "equipment-augment-1-0:EQUIPMENT_CATEGORY_CENTRAL_PROCESSING_UNIT",
+                                    "equipment-augment-1-0:EQUIPMENT_CATEGORY_STORAGE_DRIVE",
+                                    "equipment-augment-1-0:EQUIPMENT_CATEGORY_SENSOR",
+                                    "equipment-augment-1-0:EQUIPMENT_CATEGORY_MODEM",
+                                    "equipment-augment-1-0:EQUIPMENT_CATEGORY_PORT_EXPANSION_BOARD",
+                                    "equipment-augment-1-0:EQUIPMENT_CATEGORY_OUTDOOR_UNIT",
+                                    "equipment-augment-1-0:EQUIPMENT_CATEGORY_FULL_OUTDOOR_UNIT",
+                                    "equipment-augment-1-0:EQUIPMENT_CATEGORY_NOT_YET_DEFINED"
+                                ]
+                            }
+                        }
+                    },
+                    "swappability": {
+                        "type": "object",
+                        "properties": {
+                            "is-hot-swappable": {
+                                "type": "boolean"
+                            }
+                        }
+                    },
+                    "physical-properties": {
+                        "type": "object",
+                        "required": [
+                            "temperature"
+                        ],
+                        "properties": {
+                            "temperature": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "function-enablers": {
+                        "type": "object",
+                        "properties": {
+                            "power-state": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "mechanical-functions": {
+                        "type": "object",
+                        "properties": {
+                            "rotation-speed": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "physical-characteristics": {
+                        "type": "object",
+                        "properties": {
+                            "weight-characeristics": {
+                                "type": "string"
+                            },
+                            "fire-characteristics": {
+                                "type": "string"
+                            },
+                            "materials": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "mechanical-features": {
+                        "type": "object"
+                    },
+                    "spatial-properties-of-type": {
+                        "type": "object",
+                        "properties": {
+                            "height": {
+                                "type": "string"
+                            },
+                            "width": {
+                                "type": "string"
+                            },
+                            "length": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "environmental-rating": {
+                        "type": "object",
+                        "properties": {
+                            "thermal-rating": {
+                                "type": "object",
+                                "properties": {
+                                    "thermal-rating-name": {
+                                        "type": "string"
+                                    },
+                                    "maximum-temperature": {
+                                        "type": "string"
+                                    },
+                                    "minimum-temperature": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "power-rating": {
+                                "type": "object",
+                                "properties": {
+                                    "power-rating-name": {
+                                        "type": "string"
+                                    },
+                                    "power-rating-value": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "humidity-rating": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "manufactured-thing": {
+                        "type": "object",
+                        "required": [
+                            "manufacturer-properties",
+                            "equipment-type",
+                            "equipment-instance"
+                        ],
+                        "properties": {
+                            "manufacturer-properties": {
+                                "type": "object",
+                                "required": [
+                                    "manufacturer-name"
+                                ],
+                                "properties": {
+                                    "manufacturer-identifier": {
+                                        "type": "string"
+                                    },
+                                    "manufacturer-name": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "equipment-type": {
+                                "type": "object",
+                                "required": [
+                                    "part-type-identifier",
+                                    "version",
+                                    "equipment-augment-1-0:equipment-type-pac"
+                                ],
+                                "properties": {
+                                    "description": {
+                                        "type": "string"
+                                    },
+                                    "model-identifier": {
+                                        "type": "string"
+                                    },
+                                    "part-type-identifier": {
+                                        "type": "string"
+                                    },
+                                    "type-name": {
+                                        "type": "string"
+                                    },
+                                    "version": {
+                                        "type": "string"
+                                    },
+                                    "equipment-augment-1-0:equipment-type-pac": {
+                                        "type": "object",
+                                        "required": [
+                                            "outside-label",
+                                            "lct-label"
+                                        ],
+                                        "properties": {
+                                            "outside-label": {
+                                                "type": "string"
+                                            },
+                                            "lct-label": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "equipment-instance": {
+                                "type": "object",
+                                "required": [
+                                    "manufacture-date",
+                                    "serial-number"
+                                ],
+                                "properties": {
+                                    "manufacture-date": {
+                                        "type": "string",
+                                        "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                                    },
+                                    "serial-number": {
+                                        "type": "string"
+                                    },
+                                    "asset-instance-identifier": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "operator-augmented-equipment-type": {
+                                "type": "object",
+                                "properties": {
+                                    "asset-type-identifier": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "operator-augmented-equipment-instance": {
+                                "type": "object",
+                                "properties": {
+                                    "asset-instance-identifier": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "local-id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "array"
+                    },
+                    "label": {
+                        "type": "array"
+                    },
+                    "extension": {
+                        "type": "array"
+                    },
+                    "operational-state": {
+                        "type": "string",
+                        "enum": [
+                            "core-model-1-4:OPERATIONAL_STATE_DISABLED",
+                            "core-model-1-4:OPERATIONAL_STATE_ENABLED"
+                        ]
+                    },
+                    "administrative-control": {
+                        "type": "string"
+                    },
+                    "administrative-state": {
+                        "type": "string"
+                    },
+                    "lifecycle-state": {
+                        "type": "string"
+                    },
+                    "address": {
+                        "type": "array"
+                    }
+                }
+            }
+        }
+    },
+    "/equipment={uuid}/expected-equipment={localId}": {
+        "type": "object",
+        "required": [
+            "core-model-1-4:expected-equipment"
+        ],
+        "properties": {
+            "core-model-1-4:expected-equipment": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "required": [
+                        "structure",
+                        "manufactured-thing",
+                        "local-id",
+                        "operational-state"
+                    ],
+                    "properties": {
+                        "location": {
+                            "type": "object",
+                            "properties": {
+                                "equipment-location": {
+                                    "type": "string"
+                                },
+                                "geographical-location": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "structure": {
+                            "type": "object",
+                            "required": [
+                                "category"
+                            ],
+                            "properties": {
+                                "category": {
+                                    "type": "string",
+                                    "enum": [
+                                        "core-model-1-4:EQUIPMENT_CATEGORY_SUBRACK",
+                                        "core-model-1-4:EQUIPMENT_CATEGORY_CIRCUIT_PACK",
+                                        "core-model-1-4:EQUIPMENT_CATEGORY_SMALL_FORMFACTOR_PLUGGABLE",
+                                        "core-model-1-4:EQUIPMENT_CATEGORY_STAND_ALONE_UNIT",
+                                        "core-model-1-4:EQUIPMENT_CATEGORY_RACK",
+                                        "equipment-augment-1-0:EQUIPMENT_CATEGORY_BACKPLANE",
+                                        "equipment-augment-1-0:EQUIPMENT_CATEGORY_POWER_UNIT",
+                                        "equipment-augment-1-0:EQUIPMENT_CATEGORY_BATTERY",
+                                        "equipment-augment-1-0:EQUIPMENT_CATEGORY_FAN",
+                                        "equipment-augment-1-0:EQUIPMENT_CATEGORY_CENTRAL_PROCESSING_UNIT",
+                                        "equipment-augment-1-0:EQUIPMENT_CATEGORY_STORAGE_DRIVE",
+                                        "equipment-augment-1-0:EQUIPMENT_CATEGORY_SENSOR",
+                                        "equipment-augment-1-0:EQUIPMENT_CATEGORY_MODEM",
+                                        "equipment-augment-1-0:EQUIPMENT_CATEGORY_PORT_EXPANSION_BOARD",
+                                        "equipment-augment-1-0:EQUIPMENT_CATEGORY_OUTDOOR_UNIT",
+                                        "equipment-augment-1-0:EQUIPMENT_CATEGORY_FULL_OUTDOOR_UNIT",
+                                        "equipment-augment-1-0:EQUIPMENT_CATEGORY_NOT_YET_DEFINED"
+                                    ]
+                                }
+                            }
+                        },
+                        "swappability": {
+                            "type": "object",
+                            "properties": {
+                                "is-hot-swappable": {
+                                    "type": "boolean"
+                                }
+                            }
+                        },
+                        "physical-properties": {
+                            "type": "object",
+                            "properties": {
+                                "temperature": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "function-enablers": {
+                            "type": "object",
+                            "properties": {
+                                "power-state": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "mechanical-functions": {
+                            "type": "object",
+                            "properties": {
+                                "rotation-speed": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "physical-characteristics": {
+                            "type": "object",
+                            "properties": {
+                                "weight-characeristics": {
+                                    "type": "string"
+                                },
+                                "fire-characteristics": {
+                                    "type": "string"
+                                },
+                                "materials": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "mechanical-features": {
+                            "type": "object"
+                        },
+                        "spatial-properties-of-type": {
+                            "type": "object",
+                            "properties": {
+                                "height": {
+                                    "type": "string"
+                                },
+                                "width": {
+                                    "type": "string"
+                                },
+                                "length": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "environmental-rating": {
+                            "type": "object",
+                            "properties": {
+                                "thermal-rating": {
+                                    "type": "object",
+                                    "properties": {
+                                        "thermal-rating-name": {
+                                            "type": "string"
+                                        },
+                                        "maximum-temperature": {
+                                            "type": "string"
+                                        },
+                                        "minimum-temperature": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "power-rating": {
+                                    "type": "object",
+                                    "properties": {
+                                        "power-rating-name": {
+                                            "type": "string"
+                                        },
+                                        "power-rating-value": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "humidity-rating": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "manufactured-thing": {
+                            "type": "object",
+                            "required": [
+                                "manufacturer-properties",
+                                "equipment-type"
+                            ],
+                            "properties": {
+                                "manufacturer-properties": {
+                                    "type": "object",
+                                    "required": [
+                                        "manufacturer-name"
+                                    ],
+                                    "properties": {
+                                        "manufacturer-identifier": {
+                                            "type": "string"
+                                        },
+                                        "manufacturer-name": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "equipment-type": {
+                                    "type": "object",
+                                    "required": [
+                                        "part-type-identifier",
+                                        "version"
+                                    ],
+                                    "properties": {
+                                        "description": {
+                                            "type": "string"
+                                        },
+                                        "model-identifier": {
+                                            "type": "string"
+                                        },
+                                        "part-type-identifier": {
+                                            "type": "string"
+                                        },
+                                        "type-name": {
+                                            "type": "string"
+                                        },
+                                        "version": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "equipment-instance": {
+                                    "type": "object",
+                                    "properties": {
+                                        "manufacture-date": {
+                                            "type": "string"
+                                        },
+                                        "serial-number": {
+                                            "type": "string"
+                                        },
+                                        "asset-instance-identifier": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "operator-augmented-equipment-type": {
+                                    "type": "object",
+                                    "properties": {
+                                        "asset-type-identifier": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "operator-augmented-equipment-instance": {
+                                    "type": "object",
+                                    "properties": {
+                                        "asset-instance-identifier": {
                                             "type": "string"
                                         }
                                     }
                                 }
                             }
                         },
-                        "equipment-instance": {
-                            "type": "object",
-                            "required": [
-                                "manufacture-date",
-                                "serial-number"
-                            ],
-                            "properties": {
-                                "manufacture-date": {
-                                    "type": "string",
-                                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
-                                },
-                                "serial-number": {
-                                    "type": "string"
-                                },
-                                "asset-instance-identifier": {
-                                    "type": "string"
-                                }
-                            }
+                        "local-id": {
+                            "type": "string"
                         },
-                        "operator-augmented-equipment-type": {
-                            "type": "object",
-                            "properties": {
-                                "asset-type-identifier": {
-                                    "type": "string"
-                                }
-                            }
+                        "name": {
+                            "type": "array"
                         },
-                        "operator-augmented-equipment-instance": {
-                            "type": "object",
-                            "properties": {
-                                "asset-instance-identifier": {
-                                    "type": "string"
-                                }
-                            }
+                        "label": {
+                            "type": "array"
+                        },
+                        "extension": {
+                            "type": "array"
+                        },
+                        "operational-state": {
+                            "type": "string",
+                            "enum": [
+                                "core-model-1-4:OPERATIONAL_STATE_DISABLED",
+                                "core-model-1-4:OPERATIONAL_STATE_ENABLED"
+                            ]
+                        },
+                        "administrative-control": {
+                            "type": "string"
+                        },
+                        "administrative-state": {
+                            "type": "string"
+                        },
+                        "lifecycle-state": {
+                            "type": "string"
+                        },
+                        "address": {
+                            "type": "array"
                         }
                     }
-                },
-                "local-id": {
-                    "type": "string"
-                },
-                "name": {
-                    "type": "array"
-                },
-                "label": {
-                    "type": "array"
-                },
-                "extension": {
-                    "type": "array"
-                },
-                "operational-state": {
-                    "type": "string",
-                    "enum": [
-                        "core-model-1-4:OPERATIONAL_STATE_DISABLED",
-                        "core-model-1-4:OPERATIONAL_STATE_ENABLED"
-                    ]
-                },
-                "administrative-control": {
-                    "type": "string"
-                },
-                "administrative-state": {
-                    "type": "string"
-                },
-                "lifecycle-state": {
-                    "type": "string"
-                },
-                "address": {
-                    "type": "array"
                 }
             }
         }
+    },
+    "/restart": {
+        "type": "object",
+        "required": [
+            "kind-of-restart",
+            "affected-component-path"
+        ],
+        "properties": {
+            "kind-of-restart": {
+                "type": "string",
+                "enum": [
+                    "equipment-augment-1-0:RESTART_TYPE_COLD",
+                    "equipment-augment-1-0:RESTART_TYPE_WARM"
+                ]
+            },
+            "affected-component-path": {
+                "type": "string"
+            }
+        }
     }
-  },
-"/equipment={uuid}/expected-equipment={localId}": {
-      "type": "object",
-      "required": [
-          "core-model-1-4:expected-equipment"
-      ],
-      "properties": {
-          "core-model-1-4:expected-equipment": {
-              "type": "array",
-              "items": {
-                  "type": "object",
-                  "required": [
-                      "structure",
-                      "manufactured-thing",
-                      "local-id",
-                      "operational-state"
-                  ],
-                  "properties": {
-                      "location": {
-                          "type": "object",
-                          "properties": {
-                              "equipment-location": {
-                                  "type": "string"
-                              },
-                              "geographical-location": {
-                                  "type": "string"
-                              }
-                          }
-                      },
-                      "structure": {
-                          "type": "object",
-                          "required": [
-                              "category"
-                          ],
-                          "properties": {
-                              "category": {
-                                  "type": "string",
-                                  "enum": [
-                                      "core-model-1-4:EQUIPMENT_CATEGORY_SUBRACK",
-                                      "core-model-1-4:EQUIPMENT_CATEGORY_CIRCUIT_PACK",
-                                      "core-model-1-4:EQUIPMENT_CATEGORY_SMALL_FORMFACTOR_PLUGGABLE",
-                                      "core-model-1-4:EQUIPMENT_CATEGORY_STAND_ALONE_UNIT",
-                                      "core-model-1-4:EQUIPMENT_CATEGORY_RACK",
-                                      "equipment-augment-1-0:EQUIPMENT_CATEGORY_BACKPLANE",
-                                      "equipment-augment-1-0:EQUIPMENT_CATEGORY_POWER_UNIT",
-                                      "equipment-augment-1-0:EQUIPMENT_CATEGORY_BATTERY",
-                                      "equipment-augment-1-0:EQUIPMENT_CATEGORY_FAN",
-                                      "equipment-augment-1-0:EQUIPMENT_CATEGORY_CENTRAL_PROCESSING_UNIT",
-                                      "equipment-augment-1-0:EQUIPMENT_CATEGORY_STORAGE_DRIVE",
-                                      "equipment-augment-1-0:EQUIPMENT_CATEGORY_SENSOR",
-                                      "equipment-augment-1-0:EQUIPMENT_CATEGORY_MODEM",
-                                      "equipment-augment-1-0:EQUIPMENT_CATEGORY_PORT_EXPANSION_BOARD",
-                                      "equipment-augment-1-0:EQUIPMENT_CATEGORY_OUTDOOR_UNIT",
-                                      "equipment-augment-1-0:EQUIPMENT_CATEGORY_FULL_OUTDOOR_UNIT",
-                                      "equipment-augment-1-0:EQUIPMENT_CATEGORY_NOT_YET_DEFINED"
-                                  ]
-                              }
-                          }
-                      },
-                      "swappability": {
-                          "type": "object",
-                          "properties": {
-                              "is-hot-swappable": {
-                                  "type": "boolean"
-                              }
-                          }
-                      },
-                      "physical-properties": {
-                          "type": "object",
-                          "properties": {
-                              "temperature": {
-                                  "type": "string"
-                              }
-                          }
-                      },
-                      "function-enablers": {
-                          "type": "object",
-                          "properties": {
-                              "power-state": {
-                                  "type": "string"
-                              }
-                          }
-                      },
-                      "mechanical-functions": {
-                          "type": "object",
-                          "properties": {
-                              "rotation-speed": {
-                                  "type": "string"
-                              }
-                          }
-                      },
-                      "physical-characteristics": {
-                          "type": "object",
-                          "properties": {
-                              "weight-characeristics": {
-                                  "type": "string"
-                              },
-                              "fire-characteristics": {
-                                  "type": "string"
-                              },
-                              "materials": {
-                                  "type": "string"
-                              }
-                          }
-                      },
-                      "mechanical-features": {
-                          "type": "object"
-                      },
-                      "spatial-properties-of-type": {
-                          "type": "object",
-                          "properties": {
-                              "height": {
-                                  "type": "string"
-                              },
-                              "width": {
-                                  "type": "string"
-                              },
-                              "length": {
-                                  "type": "string"
-                              }
-                          }
-                      },
-                      "environmental-rating": {
-                          "type": "object",
-                          "properties": {
-                              "thermal-rating": {
-                                  "type": "object",
-                                  "properties": {
-                                      "thermal-rating-name": {
-                                          "type": "string"
-                                      },
-                                      "maximum-temperature": {
-                                          "type": "string"
-                                      },
-                                      "minimum-temperature": {
-                                          "type": "string"
-                                      }
-                                  }
-                              },
-                              "power-rating": {
-                                  "type": "object",
-                                  "properties": {
-                                      "power-rating-name": {
-                                          "type": "string"
-                                      },
-                                      "power-rating-value": {
-                                          "type": "string"
-                                      }
-                                  }
-                              },
-                              "humidity-rating": {
-                                  "type": "string"
-                              }
-                          }
-                      },
-                      "manufactured-thing": {
-                          "type": "object",
-                          "required": [
-                              "manufacturer-properties",
-                              "equipment-type"
-                          ],
-                          "properties": {
-                              "manufacturer-properties": {
-                                  "type": "object",
-                                  "required": [
-                                      "manufacturer-name"
-                                  ],
-                                  "properties": {
-                                      "manufacturer-identifier": {
-                                          "type": "string"
-                                      },
-                                      "manufacturer-name": {
-                                          "type": "string"
-                                      }
-                                  }
-                              },
-                              "equipment-type": {
-                                  "type": "object",
-                                  "required": [
-                                      "part-type-identifier",
-                                      "version"
-                                  ],
-                                  "properties": {
-                                      "description": {
-                                          "type": "string"
-                                      },
-                                      "model-identifier": {
-                                          "type": "string"
-                                      },
-                                      "part-type-identifier": {
-                                          "type": "string"
-                                      },
-                                      "type-name": {
-                                          "type": "string"
-                                      },
-                                      "version": {
-                                          "type": "string"
-                                      }
-                                  }
-                              },
-                              "equipment-instance": {
-                                  "type": "object",
-                                  "properties": {
-                                      "manufacture-date": {
-                                          "type": "string"
-                                      },
-                                      "serial-number": {
-                                          "type": "string"
-                                      },
-                                      "asset-instance-identifier": {
-                                          "type": "string"
-                                      }
-                                  }
-                              },
-                              "operator-augmented-equipment-type": {
-                                  "type": "object",
-                                  "properties": {
-                                      "asset-type-identifier": {
-                                          "type": "string"
-                                      }
-                                  }
-                              },
-                              "operator-augmented-equipment-instance": {
-                                  "type": "object",
-                                  "properties": {
-                                      "asset-instance-identifier": {
-                                          "type": "string"
-                                      }
-                                  }
-                              }
-                          }
-                      },
-                      "local-id": {
-                          "type": "string"
-                      },
-                      "name": {
-                          "type": "array"
-                      },
-                      "label": {
-                          "type": "array"
-                      },
-                      "extension": {
-                          "type": "array"
-                      },
-                      "operational-state": {
-                          "type": "string",
-                          "enum": [
-                              "core-model-1-4:OPERATIONAL_STATE_DISABLED",
-                              "core-model-1-4:OPERATIONAL_STATE_ENABLED"
-                          ]
-                      },
-                      "administrative-control": {
-                          "type": "string"
-                      },
-                      "administrative-state": {
-                          "type": "string"
-                      },
-                      "lifecycle-state": {
-                          "type": "string"
-                      },
-                      "address": {
-                          "type": "array"
-                      }
-                  }
-              }
-          }
-      }
-  }
 }

@@ -30,6 +30,12 @@
 				"collectionName": "EquipmentAugment",
 				"serverToBeApplied": "controller",
 				"mountName": "513250004"
+			},
+			{
+				"collectionName": "EquipmentAugmentRpc",
+				"serverToBeApplied": "controller",
+				"mountName": "513250004",
+				"kindOfRestart": "equipment-augment-1-0:RESTART_TYPE_WARM"
 			}
 		]
 	}
