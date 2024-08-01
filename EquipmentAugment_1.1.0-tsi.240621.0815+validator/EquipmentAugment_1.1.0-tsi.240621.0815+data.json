@@ -23,6 +23,12 @@
 				"server": "http://ip.add.re.ss:port",
 				"pathToControlConstruct": "/rests/data/network-topology:network-topology/topology=topology-netconf/node={mountName}/yang-ext:mount/core-model-1-4:control-construct",
 				"authorizationCode": "authorizationCode"
+			},
+			{
+				"serverName": "controllerRpc",
+				"server": "http://ip.add.re.ss:port",
+				"pathToControlConstruct": "/rests/operations/network-topology:network-topology/topology=topology-netconf/node={mountName}/yang-ext:mount",
+				"authorizationCode": "authorizationCode"
 			}
 		],
 		"collectionInputList": [
@@ -33,7 +39,7 @@
 			},
 			{
 				"collectionName": "EquipmentAugmentRpc",
-				"serverToBeApplied": "controller",
+				"serverToBeApplied": "controllerRpc",
 				"mountName": "513250004",
 				"kindOfRestart": "equipment-augment-1-0:RESTART_TYPE_WARM"
 			}
