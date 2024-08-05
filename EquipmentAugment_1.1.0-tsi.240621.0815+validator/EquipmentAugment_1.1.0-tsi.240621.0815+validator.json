@@ -18,9 +18,9 @@
 							"script": {
 								"exec": [
 									"console.clear();\r",
-									"console.log(\"==========================================================================================\");\r",
-									"console.log(\"===== EquipmentAugment_1.1.0-tsi.240621.0815+validator ===================================\");\r",
-									"console.log(\"==========================================================================================\");\r",
+									"logger.struc(\"==========================================================================================\");\r",
+									"logger.struc(\"===== EquipmentAugment_1.1.0-tsi.240621.0815+validator ===================================\");\r",
+									"logger.struc(\"==========================================================================================\");\r",
 									"\r",
 									"\r",
 									"/****************************************************************************************\r",
@@ -31,7 +31,7 @@
 									"    inputFromFile = data\r",
 									"\r",
 									"} catch (error) {\r",
-									"    console.error(\"! Input data could not be loaded.\")\r",
+									"    logger.error(\"! Input data could not be loaded.\")\r",
 									"}\r",
 									"\r",
 									"\r",
@@ -92,7 +92,7 @@
 									"    pm.environment.set(\"collectionInputList\", collectionInputList);\r",
 									"\r",
 									"} catch (error) {\r",
-									"    console.error(\"! Environment variables could not be set.\")\r",
+									"    logger.error(\"! Environment variables could not be set.\")\r",
 									"}\r",
 									"\r",
 									"\r",
@@ -103,7 +103,7 @@
 									"    pm.collectionVariables.clear()\r",
 									"\r",
 									"} catch (error) {\r",
-									"    console.error(\"! Collection variables could not be set.\")\r",
+									"    logger.error(\"! Collection variables could not be set.\")\r",
 									"}\r",
 									"\r",
 									"\r",
@@ -124,7 +124,7 @@
 									"    pm.request.headers.upsert({ key: \"Content-Type\", value: \"application/json\" })\r",
 									"\r",
 									"} catch (error) {\r",
-									"    console.error(\"! Local variables could not be set.\")\r",
+									"    logger.error(\"! Local variables could not be set.\")\r",
 									"}\r",
 									"\r",
 									"\r",
@@ -139,16 +139,17 @@
 									"            }\r",
 									"        }\r",
 									"    } catch (error) {\r",
-									"        console.error(\"! serverList not found or faulty\");\r",
+									"        logger.error(\"! serverList not found or faulty\");\r",
 									"        return {}\r",
 									"    }\r",
-									"    console.log(\"Server could not be found in serverList.\");\r",
+									"    logger.warn(\"Server could not be found in serverList.\");\r",
 									"    return {}\r",
 									"}\r",
 									"\r",
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						},
 						{
@@ -157,7 +158,8 @@
 								"exec": [
 									""
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
