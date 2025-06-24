@@ -11,17 +11,17 @@
 ### UML
 - [EquipmentAugment_1.0.0-tsi.240104.1330](./EquipmentAugment_1.0.0-tsi.240104.1330.zip)  
 - [EquipmentAugment_1.1.0-tsi.240621.0815](./EquipmentAugment_1.1.0-tsi.240621.0815.zip)  
-- [EquipmentAugment_1.2.0-tsi.250607.1000](./EquipmentAugment_1.2.0-tsi.250607.1000.zip)  
+- [EquipmentAugment_1.2.0-tsi.250624.1045](./EquipmentAugment_1.2.0-tsi.250624.1045.zip) (1)  
 
 ### Overview 
 - [EquipmentAugment_1.0.0-tsi.240104.1330+overview.1](./EquipmentAugment_1.0.0-tsi.240104.1330+overview.1.png)  
 - [EquipmentAugment_1.1.0-tsi.240621.0815+overview.1](./EquipmentAugment_1.1.0-tsi.240621.0815+overview.1.png)  
-- [EquipmentAugment_1.2.0-tsi.250607.1000+overview.1](./EquipmentAugment_1.2.0-tsi.250607.1000+overview.1.png)  
+- [EquipmentAugment_1.2.0-tsi.250624.1045+overview.1](./EquipmentAugment_1.2.0-tsi.250624.1045+overview.1.png) (1)  
 
 ### GenDoc Export
 - [EquipmentAugment_1.0.0-tsi.240104.1330+gendoc.1](./EquipmentAugment_1.0.0-tsi.240104.1330+gendoc.1.docx)  
 - [EquipmentAugment_1.1.0-tsi.240621.0815+gendoc.1](./EquipmentAugment_1.1.0-tsi.240621.0815+gendoc.1.docx)  
-- [EquipmentAugment_1.2.0-tsi.250607.1000+gendoc.1](./EquipmentAugment_1.2.0-tsi.250607.1000+gendoc.1.docx)  
+- [EquipmentAugment_1.2.0-tsi.250624.1045+gendoc.1](./EquipmentAugment_1.2.0-tsi.250624.1045+gendoc.1.docx) (1)  
 
 ### Augmentation Condition
 - not required
@@ -29,6 +29,7 @@
 ### YANG File
 - [EquipmentAugment_1.0.0-tsi.240104.1330+yang](./EquipmentAugment_1.0.0-tsi.240104.1330+yang/)  
 - [EquipmentAugment_1.1.0-tsi.240621.0815+yang](./EquipmentAugment_1.1.0-tsi.240621.0815+yang/)  
+- [EquipmentAugment_1.2.0-tsi.250624.1045+yang](./EquipmentAugment_1.2.0-tsi.250624.1045+yang/) (1)  
 
 ### Schema  
 - [EquipmentAugment_1.0.0-tsi.240104.1330+schema](./EquipmentAugment_1.0.0-tsi.240104.1330+schema/)  
@@ -53,4 +54,4 @@
 - [equipment/issues](../../issues)
 
 ### Comments
-./.
+ (1)  :  Temporarily until the proposed solution in [issue#59](https://github.com/openBackhaul/equipment/issues/59) has been approved  
