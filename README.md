@@ -54,4 +54,4 @@
 - [equipment/issues](../../issues)
 
 ### Comments
- (1)  :  Temporarily until the proposed solution in [issue#59](https://github.com/openBackhaul/equipment/issues/59) has been approved  
+ (1)  :  Preliminary until the proposed solution in [issue#59](https://github.com/openBackhaul/equipment/issues/59) has been approved  
